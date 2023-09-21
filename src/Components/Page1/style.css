@@ -1,0 +1,59 @@
+[class$="__container"] {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-image: url(./Images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inner__container {
+}
+.logo {
+  display: block;
+  margin-bottom: 30px;
+}
+.main {
+  display: flex;
+}
+.main__img {
+  width: 400px;
+  margin-right: 50px;
+}
+.img {
+  width: 400px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.main__description {
+}
+
+.main__life {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.main__text p {
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: left;
+}
