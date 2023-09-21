@@ -3,7 +3,11 @@
 }
 
 body {
- 
+  font-family: 'e-Ukraine-Regular', sans-serif;
+}
+
+h1 {
+  font-family: 'e-UkraineHead-Regular', sans-serif;
 }
 
 .App-logo {

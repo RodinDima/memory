@@ -28,7 +28,7 @@ const Page1 = () => {
             <img className="img" src={Sokol} alt="" />
           </div>
           <div className="main__description">
-            <NameTemplate text="Сергій Анатолійович СОКОЛЕНКО 30.05.1969 - 04.01.2023" />
+            <NameTemplate text="Сергій Анатолійович СОКОЛЕНКО" />
             <h2 className="main__life">Віддав життя за Україну</h2>
             <PositionTemplate text="молодший інспектор І категорії – помічник гранатометника" />
           </div>
