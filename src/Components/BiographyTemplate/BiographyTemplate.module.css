@@ -3,3 +3,14 @@
 	font-size: 46px;
 	margin-bottom: 20px;
 }
+
+@media (max-width: 535px){
+	.special-text {
+	font-size: 35px;
+}}
+
+@media (max-width: 383px) {
+	.special-text {
+	font-size: 25px;
+	margin-bottom: 10px;
+}}

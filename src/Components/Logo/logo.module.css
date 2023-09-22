@@ -1,3 +1,10 @@
 .img {
-	
+	display: block;
+	padding-top: 30px;
+}
+
+@media (max-width:576px) {
+	.img svg{
+		width: 90%;
+	}
 }

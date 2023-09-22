@@ -4,3 +4,12 @@
 	border-radius: 10px;
 	padding: 10px;
 }
+
+@media (max-width: 535px){
+	.special-text {
+	font-size: 1.7rem;
+}}
+@media (max-width: 383px) {
+	.special-text {
+	font-size: 1.4rem;
+}}
