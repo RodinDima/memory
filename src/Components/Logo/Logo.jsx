@@ -6,7 +6,7 @@ import style from "./logo.module.css";
 
 const Logo = ({ className }) => {
   return (
-    <a href="#"
+    <a href="/"
       className={
         className !== undefined
           ? `${style["img"]} ${className}`

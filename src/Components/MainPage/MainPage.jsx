@@ -31,12 +31,12 @@ const MainPage = () => {
         <Button buttonText="Запропонувати" />
         <div className="main__victim">
           <div className="main__victim-item">
-            <a className="main__victim-link" href="#">
+            <a className="main__victim-link" href={`/person/id=1`}>
               <img src={Sokol} alt="victim" />
             </a>
           </div>
           <div className="main__victim-item">
-            <a className="main__victim-link" href="#">
+            <a className="main__victim-link" href={`/person/2`}>
               <img src={Sokol} alt="victim" />
             </a>
           </div>
