@@ -14,46 +14,6 @@ import "./style.css";
 
 const Page1 = () => {
 
-  // const Hero = [
-  //   {
-  //     id: 1,
-  //     firstname: 'Герасімов',
-  //     name: 'Іван', 
-  //     age: 33,
-  //     zvanie: 'Kapitan'
-  //   },
-  //   {
-  //     id: 2,
-  //     firstname: 'Герасімов',
-  //     name: 'Іван', 
-  //     age: 33,
-  //     zvanie: 'Kapitan'
-  //   },
-  //   {
-  //     id: 3,
-  //     firstname: 'Герасімов',
-  //     name: 'Іван', 
-  //     age: 33,
-  //     zvanie: 'Kapitan'
-  //   },
-
-  //   {
-  //     id: 4,
-  //     firstname: 'Герасімов',
-  //     name: 'Іван', 
-  //     age: 33,
-  //     zvanie: 'Kapitan'
-  //   },
-  //   {
-  //     id: 5,
-  //     firstname: 'Герасімов',
-  //     name: 'Іван', 
-  //     age: 33,
-  //     zvanie: 'Kapitan'
-  //   },
-
-  // ]
-
   return (
     <section className="victim">
       <div className="victim__container">

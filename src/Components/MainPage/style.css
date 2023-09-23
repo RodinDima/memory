@@ -35,24 +35,31 @@
   margin-top: 30px;
   padding-bottom: 50px;
 }
-.main__victim-item {
-}
 .main__victim-link {
-  display: block;
+ display: block;
 }
-.main__victim-item img {
+
+.main__victim-item {
+  justify-content: center;
   border: 3px solid transparent;
-  width: 100%;
-  border-radius: 40px;
   transition: border-color 0.3s ease, 0.3s ease;
-}
-.main__victim-item img:hover {
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+ }
+.main__victim-item:hover {
   border: 3px solid red;
 }
+
+.main__victim-item img {
+width: 100%;
+height: 100%;
+ }
+
 @media (max-width: 1228px) {
-	.main__btns{
-		flex-direction: column;
-	}
+  .main__btns {
+    flex-direction: column;
+  }
 }
 @media (max-width: 992px) {
   .main__victim {
