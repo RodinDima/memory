@@ -57,8 +57,26 @@
 width: 100%;
 display: block;
 
-
  }
+.main__footer {
+display: flex;
+color: aliceblue;
+justify-content: center;
+align-items: center;
+padding-bottom: 50px;
+gap: 20px;
+font-size: 22px;
+}
+ .main__link {
+  display: block;
+  padding-top: 7px;
+ 
+ }
+
+   .main__link svg:hover {
+    stroke: red;
+     
+  }
 
 @media (max-width: 1228px) {
   .main__btns {

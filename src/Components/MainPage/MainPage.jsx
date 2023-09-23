@@ -6,7 +6,11 @@ import Button from "../Button/Button";
 
 import Sokol from "./Images/sokol.jpg";
 
+import { ReactComponent as FB } from "./Images/fb.svg";
+
 import "./style.css";
+
+
 
 const MainPage = () => {
   return (
@@ -106,6 +110,10 @@ const MainPage = () => {
             </a>
           </div>
         </div>
+       <div className="main__footer">
+          <div>Поширити у</div>
+          <a className="main__link" href="#"><FB/></a>
+       </div>
       </div>
     </section>
   );
