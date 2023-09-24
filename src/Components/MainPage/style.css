@@ -65,16 +65,17 @@ justify-content: center;
 align-items: center;
 padding-bottom: 50px;
 gap: 20px;
-font-size: 22px;
+font-size: 32px;
 }
  .main__link {
   display: block;
-  padding-top: 7px;
+  padding-top: 12px;
  
  }
 
    .main__link svg:hover {
     stroke: red;
+  
      
   }
 
