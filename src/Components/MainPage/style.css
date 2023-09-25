@@ -70,16 +70,17 @@ font-size: 32px;
  .main__link {
   display: block;
   padding-top: 12px;
- 
- }
-
-   .main__link svg:hover {
-    stroke: red;
-  
-     
   }
 
-@media (max-width: 1228px) {
+  .nothing {
+    display: block;
+    margin-top: 100px;
+    color: aliceblue;
+    margin-bottom: 315px;
+    font-size: 40px;
+  }
+
+ @media (max-width: 1228px) {
   .main__btns {
     flex-direction: column;
   }

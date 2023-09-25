@@ -50,7 +50,7 @@ const MainPage = () => {
             ))}
           </div>
         ) : (
-          <p>Нічого не знайдено</p>
+          <p className="nothing">Нікого не знайдено</p>
         )}
         <div className="main__footer">
           <div>Поширити у</div>
