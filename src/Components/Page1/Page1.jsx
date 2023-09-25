@@ -15,7 +15,8 @@ import "./style.css";
 
 const Page1 = () => {
   const { id } = useParams();
-  const selectedHero = Hero.find((hero) => hero.id === parseInt(id));
+  console.log("id", id)
+  const selectedHero = Hero.find((hero) => hero.id === +id);
 
   if (!selectedHero) {
     return null;
@@ -33,7 +34,7 @@ const Page1 = () => {
             <img
               className="img"
               src={selectedHero.photo}
-              alt="Сергій СОКОЛЕНКО"
+              alt={selectedHero.name}
             />
           </div>
           <div className="victim__description">

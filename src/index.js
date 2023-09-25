@@ -11,6 +11,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import Test from './Pages/Test/Test';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +22,11 @@ const router = createBrowserRouter([
     path: "person/:id",
     element: <Person />,
   },
+
+  {
+    path: "/test",
+    element: <Test/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

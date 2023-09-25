@@ -71,13 +71,20 @@ font-size: 32px;
   display: block;
   padding-top: 12px;
   }
-
-  .nothing {
-    display: block;
-    margin-top: 100px;
-    color: aliceblue;
-    margin-bottom: 315px;
-    font-size: 40px;
+.main__link:hover svg path {
+  stroke: red;
+ 
+}
+.main__link:hover svg path:nth-child(2) {
+  fill: red;
+ 
+}
+.nothing {
+display: block;
+margin-top: 100px;
+color: aliceblue;
+margin-bottom: 315px;
+font-size: 40px;
   }
 
  @media (max-width: 1228px) {
