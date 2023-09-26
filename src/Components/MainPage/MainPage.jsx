@@ -70,6 +70,46 @@ const MainPage = () => {
               <img src={Sokol} alt="victim" />
             </a>
           </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
+          <div className="main__victim-item">
+            <a className="main__victim-link" href="#">
+              <img src={Sokol} alt="victim" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
