@@ -64,6 +64,7 @@
   border-radius: 40px;
   overflow: hidden;
   cursor: pointer;
+  max-height: 285px;
  
  }
 .main__victim-item:hover {
