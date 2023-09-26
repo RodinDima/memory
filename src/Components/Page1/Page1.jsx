@@ -4,43 +4,51 @@ import NameTemplate from "../NameTemplate/NameTemplate";
 import PositionTemplate from "../PositionTemplate/PositionTemplate";
 import BiographyTemplate from "../BiographyTemplate/BiographyTemplate";
 
-import { TEXT } from "../Constants";
+import { Hero } from "../Constants";
 
-import Sokol from ".//Images/sokol.jpg";
+import { useParams } from "react-router-dom";
+
 import Logo from "../Logo/Logo";
 import GloryTemplate from "../GloryTemplate/GloryTemplate";
 
 import "./style.css";
 
 const Page1 = () => {
+  const { id } = useParams();
+  console.log("id", id)
+  const selectedHero = Hero.find((hero) => hero.id === +id);
+
+  if (!selectedHero) {
+    return null;
+  }
+
   return (
     <section className="victim">
       <div className="victim__container">
-        <div className="logo" href="#">
+        <div className="logo">
           <Logo />
         </div>
 
         <div className="victim__content">
           <div className="victim__img">
-            <img className="img" src={Sokol} alt="Сергій СОКОЛЕНКО" />
+            <img
+              className="img"
+              src={selectedHero.photo}
+              alt={selectedHero.name}
+            />
           </div>
           <div className="victim__description">
-            <NameTemplate text="Сергій Анатолійович СОКОЛЕНКО" />
+            <NameTemplate text={selectedHero.name} />
             <h2 className="victim__life">Віддав життя за Україну</h2>
-            <PositionTemplate text="молодший інспектор І категорії – помічник гранатометника" />
+            <PositionTemplate text={selectedHero.position} />
           </div>
         </div>
 
         <BiographyTemplate text="Життєпис" />
         <div className="victim__text">
-          <p>{TEXT.Page1.p1}</p>
-          <p>{TEXT.Page1.p2}</p>
-          <p>{TEXT.Page1.p3}</p>
-          <p>{TEXT.Page1.p4}</p>
-          <p>{TEXT.Page1.p5}</p>
-          <p>{TEXT.Page1.p6}</p>
-          <p>{TEXT.Page1.p7}</p>
-          <p>{TEXT.Page1.p8}</p>
+          {Object.keys(selectedHero.texts).map((key, index) => (
+            <p key={index}>{selectedHero.texts[key]}</p>
+          ))}
         </div>
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
       </div>

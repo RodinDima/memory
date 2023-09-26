@@ -1,4 +1,5 @@
 import React from "react";
+
 import style from "./BiographyTemplate.module.css";
 
 const BiographyTemplate = ({ text, className }) => {
