@@ -20,6 +20,7 @@ body {
   background-image: url(./Images/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'e-Ukraine-Regular', sans-serif;
 }
 
 .logo {

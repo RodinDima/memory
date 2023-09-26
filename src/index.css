@@ -1,3 +1,14 @@
+
+@font-face {
+  font-family: "e-Ukraine-Regular";
+  src: url("/src/Components/Fonts/e-ukraine-regular_w.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "e-UkraineHead-Regular";
+  src: url("/src/Components/Fonts/e-UkraineHead-Regular.woff2") format("woff2");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

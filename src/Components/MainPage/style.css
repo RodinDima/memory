@@ -2,12 +2,29 @@
   background-image: url(./Images/mainbg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'e-Ukraine-Regular', sans-serif;
 }
 .main__container {
+  position: relative;
 }
 .main__logo {
   margin-top: 30px;
 }
+.rotating__svg {
+  position: absolute;
+  width: 20%;
+  top: -213px;
+  left: 0;
+  animation: rotate 15s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Початковий оберт на 0 градусів */
+  }
+  to {
+    transform: rotate(360deg); /* Кінцевий оберт на 360 градусів (повний оберт) */
+  }}
+
 .main__btns {
   display: flex;
   float: 0 0 auto;

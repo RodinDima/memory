@@ -1,0 +1,15 @@
+
+
+
+.video__container {
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+}

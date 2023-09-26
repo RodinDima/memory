@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import Main from "./Pages/Main/Main";
 import Person from "./Pages/Person/Person";
 
+import "./styles/fonts.css";
+
 import {
   createBrowserRouter,
   RouterProvider,

@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 
 import { ReactComponent as FB } from "./Images/fb.svg";
 
+import { ReactComponent as Page } from "./Images/page.svg";
+
 import { Hero } from "../Constants";
 
 import "./style.css";
@@ -19,6 +21,7 @@ const MainPage = () => {
     <section className="main">
       <div className="main__container">
         <Logo />
+        <Page className="rotating__svg"/>
         <div className="main__btns">
           <a href="#">
             <Button buttonText="Герої" />
