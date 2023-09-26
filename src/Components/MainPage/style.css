@@ -104,6 +104,24 @@ color: aliceblue;
 margin-bottom: 315px;
 font-size: 40px;
   }
+ 
+ 
+ .main__inf {
+  color: white;
+ }
+ 
+  .main__inf a {
+   color: white;
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+   padding-bottom: 50px;
+   transition: all .3s ease;
+  }
+.main__inf a:hover {
+  color: red;
+}
+
 
  @media (max-width: 1228px) {
   .main__btns {

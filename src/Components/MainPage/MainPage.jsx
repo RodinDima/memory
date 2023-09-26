@@ -21,7 +21,7 @@ const MainPage = () => {
     <section className="main">
       <div className="main__container">
         <Logo />
-        <Page className="rotating__svg"/>
+        <Page className="rotating__svg" />
         <div className="main__btns">
           <a href="#">
             <Button buttonText="Герої" />
@@ -61,6 +61,15 @@ const MainPage = () => {
             <FB />
           </a>
         </div>
+       <div className="main__inf">
+          <p>Сайт працює у тестовому режимі.</p>
+          <p>Зауваження та пропозиції просимо надсилати на e-mail:</p>
+          <a
+            href="mailto:rodindima1984@gmail.com"
+            rel="noopener noreferrer"
+            target="blank"
+          >rodindima1984@gmail.com</a>
+       </div>
       </div>
     </section>
   );
