@@ -13,6 +13,7 @@ import Logo from "../Logo/Logo";
 import GloryTemplate from "../GloryTemplate/GloryTemplate";
 
 import "./style.css";
+import ButtonFb from "../ButtonFb/ButtonFb";
 
 const Page1 = () => {
   const { id } = useParams();
@@ -53,6 +54,7 @@ const Page1 = () => {
           ))}
         </div>
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
+        <ButtonFb buttonText="Поширити у ФБ" />
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import { ReactComponent as FB } from "./Images/fb.svg";
 
 import { ReactComponent as Page } from "./Images/page.svg";
+import { ReactComponent as Search } from "./Images/search.svg";
 
 import { Hero } from "../Constants";
 
@@ -21,7 +22,7 @@ const MainPage = () => {
     <section className="main">
       <div className="main__container">
         <Logo />
-        <Page className="rotating__svg" />
+        
         <div className="main__btns">
           <a href="#">
             <Button buttonText="Герої" />
@@ -34,6 +35,7 @@ const MainPage = () => {
           </a>
         </div>
         <form className="main__search">
+          <Search className="main__search-icon"/>
           <input
             type="text"
             value={searchText}

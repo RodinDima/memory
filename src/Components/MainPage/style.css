@@ -123,7 +123,17 @@ font-size: 40px;
 .main__inf a:hover {
   color: red;
 }
+.main__search {
+  position: relative;
+}
 
+.main__search-icon {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 7px;
+  left: 7px;
+}
 
  @media (max-width: 1228px) {
   .main__btns {
@@ -160,6 +170,9 @@ font-size: 40px;
   }
   .main__btns {
     margin-top: 0;
+  }
+  .main__search-icon {
+    display: none;
   }
 }
 @media (max-width: 400px) {
