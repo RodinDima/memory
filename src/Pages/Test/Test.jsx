@@ -9,7 +9,7 @@ const Test = () => {
           <h2 className="video__text">Шляхами війни</h2>
         </a>
         <div className="video">
-          <iframe
+          <iframe className="video-item"
             width="720"
             height="405"
             src="https://www.youtube.com/embed/yrc7BqjuxYE?si=hrPqzFMni9jMsYtN"
@@ -18,7 +18,7 @@ const Test = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <iframe
+          <iframe className="video-item"
             width="720"
             height="405"
             src="https://www.youtube.com/embed/wS2GYSp-guQ?si=kcgmyyzyVgCVSu0e"
@@ -27,7 +27,7 @@ const Test = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <iframe
+          <iframe className="video-item"
             width="720"
             height="405"
             src="https://www.youtube.com/embed/Gc1uT-KvQ7w?si=h1GaJtDynOWna8gV"
@@ -36,7 +36,7 @@ const Test = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <iframe
+          <iframe className="video-item"
             width="720"
             height="405"
             src="https://www.youtube.com/embed/xkjwSvCYKJc?si=FiQsWUdHSD2Rwmty"

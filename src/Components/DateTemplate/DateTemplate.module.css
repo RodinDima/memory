@@ -1,0 +1,15 @@
+.special-text {
+	font-size: 2rem;
+	border-radius: 10px;
+	padding: 10px;
+	color: red;
+}
+
+@media (max-width: 535px){
+	.special-text {
+	font-size: 1.4rem;
+}}
+@media (max-width: 383px) {
+	.special-text {
+	font-size: 1.2rem;
+}}

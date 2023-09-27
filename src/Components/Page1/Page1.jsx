@@ -1,6 +1,7 @@
 import React from "react";
 
 import NameTemplate from "../NameTemplate/NameTemplate";
+import DateTemplate from "../DateTemplate/DateTemplate";
 import PositionTemplate from "../PositionTemplate/PositionTemplate";
 import BiographyTemplate from "../BiographyTemplate/BiographyTemplate";
 
@@ -39,6 +40,7 @@ const Page1 = () => {
           </div>
           <div className="victim__description">
             <NameTemplate text={selectedHero.name} />
+            <DateTemplate text={selectedHero.date} />
             <h2 className="victim__life">Віддав життя за Україну</h2>
             <PositionTemplate text={selectedHero.position} />
           </div>

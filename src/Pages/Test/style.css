@@ -18,3 +18,15 @@
 .video__text:hover {
  color: red;
 }
+.video-item {
+  width: 720px;
+  height: 405px;
+}
+
+
+@media (max-width: 768px) {
+  .video-item {
+    width: 100%; 
+    height: 340px; 
+  }
+}
