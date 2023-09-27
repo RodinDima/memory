@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 
 import Test from './Pages/Test/Test';
+import Help from './Pages/Help/Help';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/test",
     element: <Test/>
+  },
+  {
+    path: "/Help",
+    element: <Help/>
   }
 ]);
 

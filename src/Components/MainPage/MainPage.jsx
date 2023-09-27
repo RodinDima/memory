@@ -27,7 +27,7 @@ const MainPage = () => {
           <a href="#">
             <Button buttonText="Герої" />
           </a>
-          <a href="#">
+          <a href="/Help">
             <Button buttonText="Допомога родинам зниклих безвісті" />
           </a>
           <a href="/test">

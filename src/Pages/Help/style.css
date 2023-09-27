@@ -1,0 +1,27 @@
+.help__container a {
+  margin-bottom: 20px;
+  display: block;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.help__title {
+  margin-top: 60px;
+}
+
+.help__text {
+  margin-bottom: 50px;
+}
+
+.help__text p {
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.help__container a:hover {
+  opacity: 1;
+}
+li {
+  list-style: disc;
+  text-align: start;
+  opacity: 0.7;
+}
