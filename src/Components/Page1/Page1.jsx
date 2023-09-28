@@ -62,7 +62,7 @@ console.log(facebookShareUrl);
         </div>
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
         <ButtonFb
-          buttonText="Поширити у ФБ"
+          buttonText="Поширити у фейсбук"
           facebookShareUrl={facebookShareUrl}
         />
       </div>
