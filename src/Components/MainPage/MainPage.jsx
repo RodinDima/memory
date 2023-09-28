@@ -22,6 +22,7 @@ const MainPage = () => {
     <section className="main">
       <div className="main__container">
         <Logo />
+        <h2 className="main__title">Вільногірська МТГ</h2>
         
         <div className="main__btns">
           <a href="#">
