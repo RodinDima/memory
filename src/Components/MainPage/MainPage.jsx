@@ -11,6 +11,7 @@ import { ReactComponent as Search } from "./Images/search.svg";
 import { Hero } from "../Constants";
 
 import "./style.css";
+import ButtonFb from "../ButtonFb/ButtonFb";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -59,9 +60,10 @@ const MainPage = () => {
           <p className="nothing">Нікого не знайдено</p>
         )}
         <div className="main__footer">
-          <div>Поширити у</div>
+         
           <a className="main__link" href="#">
-            <FB />
+            <ButtonFb buttonText="Поширити у фейсбук"/>
+           
           </a>
         </div>
        <div className="main__inf">
