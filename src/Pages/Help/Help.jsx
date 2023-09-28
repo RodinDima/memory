@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./style.css"
-import ButtonFb from "../../Components/ButtonFb/ButtonFb";
+import Button from "../../Components/Button/Button";
 
 const Help = () => {
     return (
@@ -60,7 +60,7 @@ const Help = () => {
         </div>
         <a href="/">
           {" "}
-          <ButtonFb buttonText="Повернутись назад" />
+          <Button buttonText="Повернутись назад" />
         </a>
       </div>
     );

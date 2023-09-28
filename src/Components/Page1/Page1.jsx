@@ -8,6 +8,7 @@ import BiographyTemplate from "../BiographyTemplate/BiographyTemplate";
 import { Hero } from "../Constants";
 
 import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 import GloryTemplate from "../GloryTemplate/GloryTemplate";
@@ -17,13 +18,19 @@ import ButtonFb from "../ButtonFb/ButtonFb";
 
 const Page1 = () => {
   const { id } = useParams();
-  console.log("id", id)
+   const location = useLocation();
+  
   const selectedHero = Hero.find((hero) => hero.id === +id);
 
   if (!selectedHero) {
     return null;
   }
-
+ 
+  const currentUrl = location.pathname;
+  const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+    currentUrl
+  )}`;
+console.log(facebookShareUrl);
   return (
     <section className="victim">
       <div className="victim__container">
@@ -54,7 +61,10 @@ const Page1 = () => {
           ))}
         </div>
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
-        <ButtonFb buttonText="Поширити у ФБ" />
+        <ButtonFb
+          buttonText="Поширити у ФБ"
+          facebookShareUrl={facebookShareUrl}
+        />
       </div>
     </section>
   );
