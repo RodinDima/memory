@@ -1,0 +1,34 @@
+
+
+.read-more {
+   text-align: start ;
+    margin: 2rem auto;
+    color: white;
+}
+
+.long-text {
+    max-height: 0;
+    overflow: hidden;
+    display: inline-block;
+    transition: max-height 0.4s;
+}
+.expanded {
+    max-height: 50rem;
+    transition: max-height 2s;
+}
+
+.btn-text {
+  background-color: #6a6a6a;
+  color: aliceblue;
+  padding: 7px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  border: 2px solid white;
+  transition: all .3s;
+}
+
+.btn-text:hover {
+    background-color: #3b3b3b;
+}
