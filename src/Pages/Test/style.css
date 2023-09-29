@@ -1,6 +1,7 @@
 .video__container {
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .video {
@@ -22,40 +23,6 @@
   width: 720px;
   height: 405px;
   position: relative;
-}
-.swiper {
-}
-
-.slider-next-button {
-    border: 3px solid #ffffff;
-    border-left: 0;
-    border-top: 0;
-    cursor: pointer;
-    height: 30px;
-    transition: all .3s;
-    width: 30px;
-    position: absolute;
-    top:145px;
-    left: 10px;
-    transform: rotate(225deg);
-    z-index: 2;
-    background-color: #ffffff49;
-}
-
-.slider-prev-button {
-    border: 3px solid #ffffff;
-    border-left: 0;
-    border-top: 0;
-    cursor: pointer;
-    height: 30px;
-    transition: all .3s;
-    width: 30px;
-    position: absolute;
-    top:228px;
-    left: 10px;
-    transform: rotate(45deg);
-    z-index: 2;
-    background-color: #ffffff49;
 }
 
 @media (max-width: 768px) {
