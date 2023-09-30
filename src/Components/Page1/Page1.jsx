@@ -30,7 +30,7 @@ const Page1 = () => {
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
     currentUrl
   )}`;
-console.log(facebookShareUrl);
+
   return (
     <section className="victim">
       <div className="victim__container">
