@@ -5,10 +5,12 @@ import cn from "classnames";
 import styles from "./style.module.css"; // Правильний імпорт
 
 const Button = (props) => {
-  const { className, buttonText, onClick} = props;
+  const { className, buttonText, handleMoreHeroes } = props;
   return (
     <>
-      <button className={cn(styles.btn, className, onClick)}>{buttonText}</button>
+      <button className={cn(styles.btn, className)} onClick={handleMoreHeroes}>
+        {buttonText}
+      </button>
       <span></span>
     </>
   );

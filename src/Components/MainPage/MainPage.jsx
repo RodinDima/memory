@@ -5,23 +5,24 @@ import ReadMore from "../ReadMore/ReadMore";
 import { Hero } from "../Constants";
 import "./style.css";
 import ButtonFb from "../ButtonFb/ButtonFb";
+import { click } from "@testing-library/user-event/dist/click";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
   const [displayedHeroes, setDisplayedHeroes] = useState(3);
-  console.log(displayedHeroes);
+ 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const filteredHeroes = Hero.filter((hero) =>
     hero.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
- const showMoreHeroes = () => {
-   try {
+  const showMoreHeroes = () => {
+    console.log(displayedHeroes + 3);
+   
      setDisplayedHeroes(displayedHeroes + 3);
-   } catch (error) {
-     console.error("Помилка у функції showMoreHeroes:", error);
-   }
+    
+
   };
   
   useEffect(() => {
@@ -38,10 +39,8 @@ const MainPage = () => {
   }, []);
 
   useEffect(() => {
-    if (windowWidth < 575) {
-      setDisplayedHeroes(3);
-    } else {
-      setDisplayedHeroes(filteredHeroes.length);
+    if (windowWidth > 575) {
+     setDisplayedHeroes(filteredHeroes.length);
     }
   }, [windowWidth, filteredHeroes]);
 
@@ -82,7 +81,7 @@ const MainPage = () => {
           <Button
             className="main__read-more-button"
             buttonText="...далі"
-            onClick={showMoreHeroes}
+            handleMoreHeroes = {showMoreHeroes}
           
           />
         )}
