@@ -1,33 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../Logo/Logo";
-
 import Button from "../Button/Button";
-
 import ReadMore from "../ReadMore/ReadMore";
-
 import { Hero } from "../Constants";
-
 import "./style.css";
 import ButtonFb from "../ButtonFb/ButtonFb";
 
-
-
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
+  const [displayedHeroes, setDisplayedHeroes] = useState(3);
+  console.log(displayedHeroes);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const filteredHeroes = Hero.filter((hero) =>
     hero.name.toLowerCase().includes(searchText.toLowerCase())
   );
+
+ const showMoreHeroes = () => {
+   try {
+     setDisplayedHeroes(displayedHeroes + 3);
+   } catch (error) {
+     console.error("Помилка у функції showMoreHeroes:", error);
+   }
+  };
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth < 575) {
+      setDisplayedHeroes(3);
+    } else {
+      setDisplayedHeroes(filteredHeroes.length);
+    }
+  }, [windowWidth, filteredHeroes]);
 
   return (
     <section className="main">
       <div className="main__container">
         <Logo />
-       
         <ReadMore />
         <div className="main__btns">
-          <a href="#">
-            <Button buttonText="Герої" />
-          </a>
           <a href="/Help">
             <Button buttonText="Допомога родинам зниклих безвісті" />
           </a>
@@ -36,7 +59,6 @@ const MainPage = () => {
           </a>
         </div>
         <form className="main__search">
-          {/* <Search className="main__search-icon"/> */}
           <input
             type="text"
             value={searchText}
@@ -44,36 +66,42 @@ const MainPage = () => {
             placeholder="Введіть ім'я для пошуку..."
           />
         </form>
-        <Button buttonText="Запропонувати" />
-        {filteredHeroes.length > 0 ? (
-          <div className="main__victim">
-            {filteredHeroes.map((hero) => (
-              <div className="main__victim-item" key={hero.id}>
-                <a className="main__victim-link" href={`/person/${hero.id}`}>
-                  <img src={hero.photo} alt="victim" />
-                </a>
-              </div>
-            ))}
-          </div>
-        ) : (
+        <div className="main__victim">
+          {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
+            <div className="main__victim-item" key={hero.id}>
+              <a className="main__victim-link" href={`/person/${hero.id}`}>
+                <img src={hero.photo} alt="victim" />
+              </a>
+            </div>
+          ))}
+        </div>
+        {filteredHeroes.length === 0 && (
           <p className="nothing">Нікого не знайдено</p>
         )}
+        {windowWidth < 575 && (
+          <Button
+            className="main__read-more-button"
+            buttonText="...далі"
+            onClick={showMoreHeroes}
+          
+          />
+        )}
         <div className="main__footer">
-         
           <a className="main__link" href="#">
-            <ButtonFb buttonText="Поширити у фейсбук"/>
-           
+            <ButtonFb buttonText="Поширити у фейсбук" />
           </a>
         </div>
-       <div className="main__inf">
+        <div className="main__inf">
           <p>Сайт працює у тестовому режимі.</p>
           <p>Зауваження та пропозиції просимо надсилати на e-mail:</p>
           <a
             href="mailto:rodindima1984@gmail.com"
             rel="noopener noreferrer"
             target="blank"
-          >rodindima1984@gmail.com</a>
-       </div>
+          >
+            rodindima1984@gmail.com
+          </a>
+        </div>
       </div>
     </section>
   );
