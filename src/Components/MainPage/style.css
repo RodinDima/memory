@@ -154,6 +154,9 @@
   font-size: 10px;
   transition: opacity .3s ease;
 }
+.main__victim-details p:first-child{
+  font-weight: bold;
+}
 
 .main__victim-item:hover .main__victim-details {
  opacity: 1;
@@ -191,7 +194,7 @@
     padding: 10px;
     box-sizing: border-box;
     opacity: 1; 
-    font-size: 10px;
+    font-size: 10px bold;
   }
 }
  
