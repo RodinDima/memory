@@ -9,8 +9,9 @@ import { click } from "@testing-library/user-event/dist/click";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
+  
   const [displayedHeroes, setDisplayedHeroes] = useState(3);
- 
+  
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const filteredHeroes = Hero.filter((hero) =>
@@ -67,10 +68,20 @@ const MainPage = () => {
         </form>
         <div className="main__victim">
           {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
-            <div className="main__victim-item" key={hero.id}>
+            <div
+              className="main__victim-item"
+              key={hero.id}
+             
+            >
               <a className="main__victim-link" href={`/person/${hero.id}`}>
                 <img src={hero.photo} alt="victim" />
               </a>
+             
+                <div className="main__victim-details">
+                  <p>{hero.name}</p>
+                  <p>{hero.date}</p>
+                </div>
+              
             </div>
           ))}
         </div>
@@ -81,15 +92,14 @@ const MainPage = () => {
           <Button
             className="main__read-more-button"
             buttonText="...далі"
-            handleMoreHeroes = {showMoreHeroes}
-          
+            handleMoreHeroes={showMoreHeroes}
           />
         )}
-        <div className="main__footer">
+        {/* <div className="main__footer">
           <a className="main__link" href="#">
             <ButtonFb buttonText="Поширити у фейсбук" />
           </a>
-        </div>
+        </div> */}
         <div className="main__inf">
           <p>Сайт працює у тестовому режимі.</p>
           <p>Зауваження та пропозиції просимо надсилати на e-mail:</p>

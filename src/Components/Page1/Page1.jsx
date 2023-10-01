@@ -61,10 +61,10 @@ const Page1 = () => {
           ))}
         </div>
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
-        <ButtonFb
+        {/* <ButtonFb
           buttonText="Поширити у фейсбук"
           facebookShareUrl={facebookShareUrl}
-        />
+        /> */}
       </div>
     </section>
   );
