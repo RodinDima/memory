@@ -6,6 +6,7 @@ import { Hero } from "../Constants";
 import "./style.css";
 import ButtonFb from "../ButtonFb/ButtonFb";
 import { click } from "@testing-library/user-event/dist/click";
+import Contacts from "../Conatcts/Contacts";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -68,20 +69,15 @@ const MainPage = () => {
         </form>
         <div className="main__victim">
           {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
-            <div
-              className="main__victim-item"
-              key={hero.id}
-             
-            >
+            <div className="main__victim-item" key={hero.id}>
               <a className="main__victim-link" href={`/person/${hero.id}`}>
                 <img src={hero.photo} alt="victim" />
               </a>
-             
-                <div className="main__victim-details">
-                  <p>{hero.name}</p>
-                  <p>{hero.date}</p>
-                </div>
-              
+
+              <div className="main__victim-details">
+                <p>{hero.name}</p>
+                <p>{hero.date}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -102,15 +98,10 @@ const MainPage = () => {
         </div> */}
         <div className="main__inf">
           <p>Сайт працює у тестовому режимі.</p>
-          <p>Зауваження та пропозиції просимо надсилати на e-mail:</p>
-          <a
-            href="mailto:rodindima1984@gmail.com"
-            rel="noopener noreferrer"
-            target="blank"
-          >
-            rodindima1984@gmail.com
-          </a>
+          <p>Зауваження та пропозиції просимо надсилати за формою:</p>
+         
         </div>
+        <Contacts />
       </div>
     </section>
   );
