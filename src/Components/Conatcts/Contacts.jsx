@@ -1,11 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import "./style.css";
+import { Dialog } from "@headlessui/react";
 
 const Contact = () => {
   const form = useRef();
   const [errors, setErrors] = useState({});
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,37 +23,34 @@ const Contact = () => {
         form.current,
         "x7MOPCx5mvBkhmsH8"
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("message sent");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then((result) => {
+        setIsFormSubmitted(true);
+      });
   };
 
   const clearErrors = () => {
-    // Функція для видалення всіх помилок зі стану errors
     setErrors({});
   };
 
   const handleInputFocus = () => {
-    // Обробник фокусу на полі вводу, видаляє всі помилки при фокусуванні
     clearErrors();
   };
 
   const formIsValid = () => {
     const newErrors = {};
 
-    if (!form.current.user_name.value) {
-      newErrors.user_name = "Поле 'Ваше ім'я' обов'язкове для заповнення";
-    }
+    const emailPattern =
+      /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|org|net|edu|gov|mil|info|biz|co)$/i;
 
-    if (!form.current.user_email.value) {
-      newErrors.user_email = "Поле 'Ваш Email' обов'язкове для заповнення";
-    }
+     if (!form.current.user_name.value) {
+       newErrors.user_name = "Поле 'Ваше ім'я' обов'язкове для заповнення";
+     }
+
+     if (!form.current.user_email.value) {
+       newErrors.user_email = "Поле 'Ваш Email' обов'язкове для заповнення";
+     } else if (!emailPattern.test(form.current.user_email.value)) {
+       newErrors.user_email = "Введіть коректну електронну адресу";
+     }
 
     setErrors(newErrors);
 
@@ -86,6 +85,20 @@ const Contact = () => {
         <button className="form__btn" type="submit" value="Send">
           відправити форму
         </button>
+        <Dialog
+          open={isFormSubmitted}
+          onClose={() => setIsFormSubmitted(false)}
+        >
+          <div className="bg_modal">
+            <Dialog.Panel className="modal">
+              <Dialog.Title className="modal__title">Повідомлення відправлено</Dialog.Title>
+              <button className="modal__close" onClick={() => setIsFormSubmitted(false)}>
+                <span></span>
+                <span></span>
+              </button>
+            </Dialog.Panel>
+          </div>
+        </Dialog>
       </form>
     </div>
   );

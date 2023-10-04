@@ -58,3 +58,55 @@ label {
   font-size: 10px;
   margin-top: 5px;
 }
+
+.bg_modal{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:rgba(0, 0, 0, 0.86);
+}
+.modal {
+  background-color: #3b3b3b;
+  border-radius: 20px;
+ padding: 30px;
+ position: relative;
+}
+
+.modal__title {
+  color: wheat;
+}
+.modal__close {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: none;
+  height: 20px;
+    top: 16px;
+    right: 20px;
+}
+
+.modal__close span {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.modal__close span:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal__close span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

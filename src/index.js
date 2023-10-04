@@ -15,6 +15,8 @@ import {
 
 import Test from './Pages/Test/Test';
 import Help from './Pages/Help/Help';
+import Fbase from './Pages/Fbase/Fbase';
+
 
 const router = createBrowserRouter([
   {
@@ -33,7 +35,12 @@ const router = createBrowserRouter([
   {
     path: "/Help",
     element: <Help/>
-  }
+  },
+  {
+    path: "/222",
+    element: <Fbase/>
+  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
