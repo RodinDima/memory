@@ -110,3 +110,13 @@ label {
 .modal__close span:nth-child(2) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+.error {
+  color: red;
+}
+
+@media (max-width:480px){
+  .modal {
+    margin: 0 20px 0 20px;
+  }
+}
