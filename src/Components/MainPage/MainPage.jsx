@@ -1,18 +1,25 @@
 import React, { useState, useEffect } from "react";
+
 import Logo from "../Logo/Logo";
+
 import Button from "../Button/Button";
+
 import ReadMore from "../ReadMore/ReadMore";
+
 import { Hero } from "../Constants";
-import "./style.css";
+
 import ButtonFb from "../ButtonFb/ButtonFb";
 import { click } from "@testing-library/user-event/dist/click";
+
 import Contacts from "../Conatcts/Contacts";
+
+import "./style.css";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
-  
+
   const [displayedHeroes, setDisplayedHeroes] = useState(3);
-  
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const filteredHeroes = Hero.filter((hero) =>
@@ -21,12 +28,10 @@ const MainPage = () => {
 
   const showMoreHeroes = () => {
     console.log(displayedHeroes + 3);
-   
-     setDisplayedHeroes(displayedHeroes + 3);
-    
 
+    setDisplayedHeroes(displayedHeroes + 3);
   };
-  
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -42,7 +47,7 @@ const MainPage = () => {
 
   useEffect(() => {
     if (windowWidth > 575) {
-     setDisplayedHeroes(filteredHeroes.length);
+      setDisplayedHeroes(filteredHeroes.length);
     }
   }, [windowWidth, filteredHeroes]);
 
@@ -99,7 +104,6 @@ const MainPage = () => {
         <div className="main__inf">
           <p>Сайт працює у тестовому режимі.</p>
           <p>Зауваження та пропозиції просимо надсилати за формою:</p>
-         
         </div>
         <Contacts />
       </div>

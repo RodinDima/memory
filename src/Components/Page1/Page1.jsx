@@ -13,19 +13,20 @@ import { useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import GloryTemplate from "../GloryTemplate/GloryTemplate";
 
-import "./style.css";
 import ButtonFb from "../ButtonFb/ButtonFb";
+
+import "./style.css";
 
 const Page1 = () => {
   const { id } = useParams();
-   const location = useLocation();
-  
+  const location = useLocation();
+
   const selectedHero = Hero.find((hero) => hero.id === +id);
 
   if (!selectedHero) {
     return null;
   }
- 
+
   const currentUrl = location.pathname;
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
     currentUrl

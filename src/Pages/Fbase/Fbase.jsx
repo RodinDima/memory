@@ -1,36 +1,46 @@
-import React from "react";
-
-import { useState } from "react";
-
-import { storage } from "./firebase"
-
-import { ref, uploadBytes } from "firebase/storage"
-
+// У компоненті Fbase
+import React, { useState } from "react";
+import { storage } from "./firebase";
+import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 
-const Fbase = () => {
-    const [imageUpload, setImageUpload] = useState(null);
-    const uploadImage = () => {
-        if (imageUpload == null) return; 
-        
-        const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-        uploadBytes(imageRef, imageUpload).then(() => {alert("Загрука виконана")})
-    
-    };
+const Fbase = ({ formData }) => {
+  const [imageUpload, setImageUpload] = useState(null);
 
+  const uploadImage = async () => {
+    if (imageUpload === null) return;
 
-    
-    return (
-        <div className="fbase">
-            <input type="file" onChange={(event) => {setImageUpload(event.target.files[0])}} />
-            <button onClick={uploadImage}>Загрузити зображення</button>
-            
+    try {
+      
+      const dataToSend = {
+        ...formData,
+        imageName: imageUpload.name,
+      };
 
-       </div>
-    
-    
-       
-    );
+      const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+      await uploadBytes(imageRef, imageUpload);
+
+     
+      console.log(dataToSend);
+
+      window.alert("Зображення та дані відправлено успішно!");
+    } catch (error) {
+      console.error("Помилка під час відправки даних", error);
+    }
+  };
+
+  return (
+    <div className="fbase">
+     
+      <input
+        type="file"
+        onChange={(event) => setImageUpload(event.target.files[0])}
+      />
+
+     
+      <button onClick={uploadImage}>Загрузити зображення</button>
+    </div>
+  );
 };
 
 export default Fbase;
