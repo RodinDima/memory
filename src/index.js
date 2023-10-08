@@ -12,6 +12,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Test from "./Pages/Test/Test";
 import Help from "./Pages/Help/Help";
+import FinalForm from "./Pages/FinalForm/FinalForm";
+import DataRequest from "./Pages/Request/DataRequest";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: "/Help",
     element: <Help />,
+  },
+  {
+    path: "/333",
+    element: <FinalForm />,
+  },
+  {
+    path: "/444",
+    element: <DataRequest />,
   },
 ]);
 

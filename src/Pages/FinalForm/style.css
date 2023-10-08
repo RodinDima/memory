@@ -1,6 +1,7 @@
 .form__name {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .final-form__container {
@@ -27,15 +28,17 @@
 .form__check {
   display: inline-block;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .check {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .form__text-area {
-  min-width: 40%;
-  max-width: 40%;
+  min-width: 90%;
+  max-width: 90%;
   min-height: 90px;
   max-height: 90px;
   padding: 7px;
@@ -60,10 +63,35 @@
   font-size: 30px;
   border: 2px solid white;
   transition: 0.3s ease, 0.3s ease;
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   transition: 0.3s ease, 0.3s ease;
 }
 
 .buttons-form:hover {
   background-color: #3b3b3b;
+}
+.react-datepicker__input-container .react-datepicker__calendar-icon {
+  padding-left: 7px;
+  padding-top: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 865px) {
+  .form__date {
+    flex-wrap: wrap;
+  }
+  .form__check {
+    margin-top: 0;
+  }
+}
+@media (max-width: 708px) {
+ .form__name input {
+  width: 90%;
+ }
+}
+@media (max-width: 500px) {
+ .buttons-form {
+  font-size: 18px;
+ }
 }

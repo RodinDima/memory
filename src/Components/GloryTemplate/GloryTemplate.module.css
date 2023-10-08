@@ -3,3 +3,9 @@
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
+@media (max-width:535px) {
+  .special-text{
+    font-size: 28px;
+  }
+}

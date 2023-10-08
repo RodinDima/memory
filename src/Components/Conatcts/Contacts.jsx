@@ -1,15 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-import "./style.css";
 import { Dialog } from "@headlessui/react";
+
+import "./style.css";
+
+
 
 const Contact = () => {
   const form = useRef();
   const [errors, setErrors] = useState({});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-
+  const regexUserName = /^[a-zA-Zа-яА-Я\s]+$/
+  
   const sendEmail = (e) => {
+    
+
     e.preventDefault();
 
     if (!formIsValid()) {
@@ -39,18 +45,23 @@ const Contact = () => {
   const formIsValid = () => {
     const newErrors = {};
 
+
+
     const emailPattern =
       /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|org|net|edu|gov|mil|info|biz|co)$/i;
 
-     if (!form.current.user_name.value) {
-       newErrors.user_name = "Поле 'Ваше ім'я' обов'язкове для заповнення";
-     }
+    if (!form.current.user_name.value) {
+      newErrors.user_name = "Поле 'Ваше ім'я' обов'язкове для заповнення";
+    } else if (!regexUserName.test(form.current.user_name.value)) {
+      newErrors.user_name =
+        "Введіть коректне ім'я без цифр і спеціальних символів";
+    }
 
-     if (!form.current.user_email.value) {
-       newErrors.user_email = "Поле 'Ваш Email' обов'язкове для заповнення";
-     } else if (!emailPattern.test(form.current.user_email.value)) {
-       newErrors.user_email = "Введіть коректну електронну адресу";
-     }
+    if (!form.current.user_email.value) {
+      newErrors.user_email = "Поле 'Ваш Email' обов'язкове для заповнення";
+    } else if (!emailPattern.test(form.current.user_email.value)) {
+      newErrors.user_email = "Введіть коректну електронну адресу";
+    }
 
     setErrors(newErrors);
 
@@ -91,8 +102,13 @@ const Contact = () => {
         >
           <div className="bg_modal">
             <Dialog.Panel className="modal">
-              <Dialog.Title className="modal__title">Повідомлення відправлено</Dialog.Title>
-              <button className="modal__close" onClick={() => setIsFormSubmitted(false)}>
+              <Dialog.Title className="modal__title">
+                Повідомлення відправлено 
+              </Dialog.Title>
+              <button
+                className="modal__close"
+                onClick={() => setIsFormSubmitted(false)}
+              >
                 <span></span>
                 <span></span>
               </button>
