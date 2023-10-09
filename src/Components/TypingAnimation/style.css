@@ -20,3 +20,14 @@ display: block;
   from, to { opacity: 0; }
   50% { opacity: 1; }
 }
+
+@media (max-width:545px){
+	.typewriter-text{
+		font-size: 36px;
+	}
+}
+@media (max-width:400px){
+	.typewriter-text{
+		font-size: 26px;
+	}
+}
