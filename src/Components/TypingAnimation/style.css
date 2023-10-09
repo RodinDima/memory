@@ -1,0 +1,22 @@
+/* styles.css */
+.typewriter-text {
+color: red;
+font-size: 56px;
+padding-top: 70px;
+display: block;
+
+}
+
+
+.cursor-blink {
+  display: inline-block;
+  width: 8px; /* Ширина курсору */
+  height: 18px; /* Висота курсору */
+ color: red;
+  animation: blink-caret .95s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}

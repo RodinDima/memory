@@ -14,6 +14,7 @@ import { click } from "@testing-library/user-event/dist/click";
 import Contacts from "../Conatcts/Contacts";
 
 import "./style.css";
+import TypingAnimation from "../TypingAnimation/TypingAnimation";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -54,7 +55,8 @@ const MainPage = () => {
   return (
     <section className="main">
       <div className="main__container">
-        <Logo />
+       
+        <TypingAnimation />
         <ReadMore />
         <div className="main__btns">
           <a href="/Help">
