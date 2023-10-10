@@ -8,13 +8,14 @@ import ReadMore from "../ReadMore/ReadMore";
 
 import { Hero } from "../Constants";
 
-import ButtonFb from "../ButtonFb/ButtonFb";
-import { click } from "@testing-library/user-event/dist/click";
+// import ButtonFb from "../ButtonFb/ButtonFb";
+// import { click } from "@testing-library/user-event/dist/click";
 
 import Contacts from "../Conatcts/Contacts";
 
-import "./style.css";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
+
+import "./style.css";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -55,15 +56,14 @@ const MainPage = () => {
   return (
     <section className="main">
       <div className="main__container">
-       
         <TypingAnimation />
         <ReadMore />
         <div className="main__btns">
           <a href="/Help">
-            <Button buttonText="Допомога родинам зниклих безвісті" />
+            <Button className="main__btns-help" buttonText="Допомога родинам зниклих безвісті" />
           </a>
           <a href="/test">
-            <Button buttonText="Шляхами війни" />
+            <Button className="main__btns-war" buttonText="Шляхами війни" />
           </a>
         </div>
         <form className="main__search">

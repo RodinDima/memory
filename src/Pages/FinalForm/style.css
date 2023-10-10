@@ -77,6 +77,10 @@
   cursor: pointer;
 }
 
+.react-datepicker__tab-loop {
+  position: absolute;
+}
+
 @media (max-width: 865px) {
   .form__date {
     flex-wrap: wrap;
@@ -86,12 +90,12 @@
   }
 }
 @media (max-width: 708px) {
- .form__name input {
-  width: 90%;
- }
+  .form__name input {
+    width: 90%;
+  }
 }
 @media (max-width: 500px) {
- .buttons-form {
-  font-size: 18px;
- }
+  .buttons-form {
+    font-size: 18px;
+  }
 }
