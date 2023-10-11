@@ -1,21 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { Dialog } from "@headlessui/react";
 
 import "./style.css";
 
-
-
 const Contact = () => {
   const form = useRef();
   const [errors, setErrors] = useState({});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const regexUserName = /^[a-zA-Zа-яА-Я\s]+$/
-  
-  const sendEmail = (e) => {
-    
+  const regexUserName = /^[a-zA-Zа-яА-Я\s]+$/;
 
+  const sendEmail = (e) => {
     e.preventDefault();
 
     if (!formIsValid()) {
@@ -29,7 +25,7 @@ const Contact = () => {
         form.current,
         "x7MOPCx5mvBkhmsH8"
       )
-      .then((result) => {
+      .then(() => {
         setIsFormSubmitted(true);
       });
   };
@@ -44,8 +40,6 @@ const Contact = () => {
 
   const formIsValid = () => {
     const newErrors = {};
-
-
 
     const emailPattern =
       /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|org|net|edu|gov|mil|info|biz|co)$/i;
@@ -103,7 +97,7 @@ const Contact = () => {
           <div className="bg_modal">
             <Dialog.Panel className="modal">
               <Dialog.Title className="modal__title">
-                Повідомлення відправлено 
+                Повідомлення відправлено
               </Dialog.Title>
               <button
                 className="modal__close"

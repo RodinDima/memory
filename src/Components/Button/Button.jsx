@@ -2,7 +2,7 @@ import React from "react";
 
 import cn from "classnames";
 
-import styles from "./style.module.css"; // Правильний імпорт
+import styles from "./style.module.css";
 
 const Button = (props) => {
   const { className, buttonText, handleMoreHeroes } = props;
