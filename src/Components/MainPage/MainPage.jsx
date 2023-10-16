@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import Logo from "../Logo/Logo";
-
 import Button from "../Button/Button";
 
 import ReadMore from "../ReadMore/ReadMore";
 
 import { Hero } from "../Constants";
-
-// import ButtonFb from "../ButtonFb/ButtonFb";
-// import { click } from "@testing-library/user-event/dist/click";
 
 import Contacts from "../Conatcts/Contacts";
 
