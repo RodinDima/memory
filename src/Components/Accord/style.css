@@ -5,6 +5,10 @@
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
   background: rgba(255, 255, 255, 0.308);
   border-style: none;
+  transition: all .7s;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:hover{
+  background: rgba(255, 255, 255, 0.151);
 }
 
 .css-15v22id-MuiAccordionDetails-root {
@@ -21,4 +25,45 @@
 }
 .css-yw020d-MuiAccordionSummary-expandIconWrapper {
   color: white !important;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type{
+  margin-bottom: 30px;
+ border-radius: 10px;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded:last-of-type {
+    margin-bottom: 30px !important;
+}
+.css-1pnmrwp-MuiTypography-root{
+  font-size: 14px !important;
+  text-align: start;
+}
+
+.css-ahj2mt-MuiTypography-root{
+  font-size: 14px !important;
+  text-align: start;
+}
+
+.css-o4b71y-MuiAccordionSummary-content {
+padding-right: 15px;}
+
+.css-ahj2mt-MuiTypography-root {
+padding-right: 40px;}
+
+@media (max-width:600px){
+  .css-1pnmrwp-MuiTypography-root{
+    font-size: 10px !important;
+   
+  }
+
+  .css-ahj2mt-MuiTypography-root{
+    font-size: 10px !important;
+    
+  }
+  .css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
+  margin: 10px 0 !important;}
+  .css-15v22id-MuiAccordionDetails-root {
+      padding: 0px 16px 16px !important;
+  }
 }

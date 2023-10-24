@@ -204,6 +204,32 @@
   }
 }
 
+@media (max-width: 679px){
+  .main__btns-help, .main__btns-war{
+    font-size: 23px;
+  }
+
+}
+@media (max-width: 505px){
+  .main__btns-help, .main__btns-war{
+    font-size: 19px;
+    margin-bottom: 20px;
+  }
+
+}
+@media (max-width: 439px){
+  .main__btns-help, .main__btns-war{
+    font-size: 16px;
+  }
+
+}
+@media (max-width: 389px){
+  .main__btns-help, .main__btns-war{
+    font-size: 12px;
+  }
+
+}
+
 @media (max-width: 576px) {
   .main__victim {
     grid-template-columns: 300px;
@@ -214,6 +240,7 @@
   .main__search input {
     height: 37px;
     padding-left: 30px;
+    margin-bottom: 0;
   }
   .main__search input::placeholder {
     font-size: 17px;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Button from "../Button/Button";
 
-import ReadMore from "../ReadMore/ReadMore";
+//import ReadMore from "../ReadMore/ReadMore";
 
 import { Hero } from "../Constants";
 
