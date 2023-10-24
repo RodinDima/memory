@@ -176,6 +176,7 @@
 @media (max-width: 768px) {
   .main__victim {
     grid-template-columns: auto auto;
+    justify-content: center;
   }
   .main__btns {
     flex-direction: column;

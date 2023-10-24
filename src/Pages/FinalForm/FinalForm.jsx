@@ -17,12 +17,10 @@ import { Dialog } from "@headlessui/react";
 
 import "./style.css";
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 const FinalForm = () => {
   const [isFormSubmit, setIsFormSubmit] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedDate2, setSelectedDate2] = useState(null);
+  const [selectedDateTwo, setSelectedDateTwo] = useState(null);
 
   const handleClick = (form) => {
     console.log(form);
@@ -30,7 +28,7 @@ const FinalForm = () => {
       form.reset();
     }
     setSelectedDate(null);
-    setSelectedDate2(null);
+    setSelectedDateTwo(null);
   };
 
   const handleSubmit = async (values) => {
@@ -69,7 +67,7 @@ const FinalForm = () => {
 
       const uploadTask = imageRef.put(file);
 
-      uploadTask.then((snapshot) => {
+      uploadTask.then(() => {
         imageRef.getDownloadURL().then((imageUrl) => {
           user.image = imageUrl;
 
@@ -78,7 +76,7 @@ const FinalForm = () => {
               "https://users-1c07d-default-rtdb.firebaseio.com/users.json",
               user
             )
-            .then((response) => {
+            .then(() => {
               setIsFormSubmit(true);
             });
         });
@@ -89,8 +87,7 @@ const FinalForm = () => {
           "https://users-1c07d-default-rtdb.firebaseio.com/users.json",
           user
         )
-        .then((response) => {
-          console.log("Данные успешно отправлены!", user);
+        .then(() => {
           setIsFormSubmit(true);
         });
     }
@@ -142,8 +139,8 @@ const FinalForm = () => {
                   locale={uk}
                 />
                 <DatePicker
-                  selected={selectedDate2}
-                  onChange={(date) => setSelectedDate2(date)}
+                  selected={selectedDateTwo}
+                  onChange={(date) => setSelectedDateTwo(date)}
                   dateFormat="dd/MM/yyyy"
                   showIcon
                   scrollableYearDropdown

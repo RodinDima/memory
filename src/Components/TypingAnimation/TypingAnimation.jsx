@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+
 import "./style.css";
 
 const TypingAnimation = () => {
   const [text, setText] = useState("");
   const sentence = "Пам'ятаємо...";
-  const typingSpeed = 150; // швидкість печатки
+  const typingSpeed = 150;
 
   useEffect(() => {
     let currentIndex = 0;
