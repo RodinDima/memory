@@ -10,7 +10,7 @@ import "./style.css"
 export default function ControlledAccordions() {
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleChange = (panel) => (event, isExpanded) => {
+  const handleChange = (panel) => (event,isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Button from "../Button/Button";
 
-//import ReadMore from "../ReadMore/ReadMore";
+import ReadMore from "../ReadMore/ReadMore";
 
 import { Hero } from "../Constants";
 
@@ -13,7 +13,10 @@ import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import { Hourglass } from "react-loader-spinner";
 
 import "./style.css";
-import ControlledAccordions from "../Accord/Accord";
+//import { Accordion } from "../Accordion/Accordion";
+//import Faq from "../Faq/Faq";
+
+//import ControlledAccordions from "../Accord/Accord";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -85,8 +88,9 @@ const MainPage = () => {
         ) : (
           <>
             <TypingAnimation />
-              {/* <ReadMore /> */}
-              <ControlledAccordions/>
+            {/*<Faq/>*/}
+            <ReadMore />
+            {/*<ControlledAccordions/>*/}
             <div className="main__btns">
               <a href="/Help">
                 <Button
