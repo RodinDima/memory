@@ -33,6 +33,11 @@
   margin-bottom: 40px;
   margin-top: 30px;
 }
+
+.typewriter-text {
+  margin-bottom: 50px;
+
+}
 .main__search input {
   width: 100%;
   border-radius: 50px;
@@ -66,7 +71,7 @@
   cursor: pointer;
   max-width: 275px;
   height: 275px;
-}
+ }
 .main__victim-item:hover {
   border: 3px solid red;
 }

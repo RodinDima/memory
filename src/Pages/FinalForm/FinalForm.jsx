@@ -88,6 +88,10 @@ const FinalForm = () => {
           user
         )
         .then(() => {
+<<<<<<< HEAD
+=======
+          console.log("Данные успешно отправлены!", user);
+>>>>>>> 2aaee00e7ecb9852113f5cd80a49a4fb7c949f67
           setIsFormSubmit(true);
         });
     }

@@ -1,0 +1,24 @@
+.css-1m4ljmh-MuiTypography-root {
+  display: none;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:last-of-type {
+  background: rgba(255, 255, 255, 0.308);
+  border-style: none;
+}
+
+.css-15v22id-MuiAccordionDetails-root {
+  padding: 8px 45px 16px;
+}
+
+.css-1pnmrwp-MuiTypography-root {
+  color: white !important;
+  font-family: "e-Ukraine-Regular", sans-serif !important;
+}
+.css-ahj2mt-MuiTypography-root {
+  color: rgb(255 255 255);
+  font-family: "e-Ukraine-Regular", sans-serif !important;
+}
+.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+  color: white !important;
+}
