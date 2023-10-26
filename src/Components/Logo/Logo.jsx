@@ -12,7 +12,7 @@ const Logo = ({ className }) => {
           ? `${style["img"]} ${className}`
           : `${style["img"]}`
       }
-    ><Logos/>
+    ><Logos />
      
     </a>
   );

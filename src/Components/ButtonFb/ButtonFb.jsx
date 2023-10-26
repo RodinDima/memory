@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 
 const ButtonFb = (props) => {
   const { className, buttonText } = props;
-  const postUrl = "https://vilnohirsk-memory.netlify.app/";
+  const postUrl = "https://vilnohirsk-memory.com/";
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
     postUrl
   )}`;

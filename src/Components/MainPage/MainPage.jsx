@@ -12,6 +12,8 @@ import TypingAnimation from "../TypingAnimation/TypingAnimation";
 
 import { Hourglass } from "react-loader-spinner";
 
+import ButtonFb from "../ButtonFb/ButtonFb";
+
 import "./style.css";
 //import { Accordion } from "../Accordion/Accordion";
 //import Faq from "../Faq/Faq";
@@ -25,21 +27,21 @@ const MainPage = () => {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const isPageLoaded = sessionStorage.getItem("isPageLoaded");
+  //useEffect(() => {
+  //  const isPageLoaded = sessionStorage.getItem("isPageLoaded");
 
-    if (isPageLoaded) {
-      setLoading(false);
-    } else {
-      setTimeout(() => {
-        setLoading(false);
+  //  if (isPageLoaded) {
+  //    setLoading(false);
+  //  } else {
+  //    setTimeout(() => {
+  //      setLoading(false);
 
-        sessionStorage.setItem("isPageLoaded", "true");
-      }, 2000);
-    }
-  }, []);
+  //      sessionStorage.setItem("isPageLoaded", "true");
+  //    }, 2000);
+  //  }
+  //}, []);
 
-  const [loading, setLoading] = useState(true);
+  //const [loading, setLoading] = useState(true);
 
   const filteredHeroes = Hero.filter((hero) =>
     hero.name.toLowerCase().includes(searchText.toLowerCase())
@@ -73,7 +75,7 @@ const MainPage = () => {
   return (
     <section className="main">
       <div className="main__container">
-        {loading ? (
+        {/*{loading ? (
           <div className="loader">
             <Hourglass
               visible={true}
@@ -86,72 +88,67 @@ const MainPage = () => {
             />
           </div>
         ) : (
-          <>
-            <TypingAnimation />
-            {/*<Faq/>*/}
-            <ReadMore />
-            {/*<ControlledAccordions/>*/}
-            <div className="main__btns">
-              <a href="/Help">
-                <Button
-                  className="main__btns-help"
-                  buttonText="Допомога родинам зниклих безвісті"
-                />
+          <>*/}
+        <TypingAnimation />
+        {/*<Faq/>*/}
+        <ReadMore />
+        {/*<ControlledAccordions/>*/}
+        <div className="main__btns">
+          <a href="/Help">
+            <Button
+              className="main__btns-help"
+              buttonText="Допомога родинам зниклих безвісті"
+            />
+          </a>
+          <a href="/test">
+            <Button className="main__btns-war" buttonText="Шляхами війни" />
+          </a>
+        </div>
+        <form className="main__search">
+          <input
+            type="text"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            placeholder="Введіть ім'я для пошуку..."
+          />
+        </form>
+        <div className="main__victim">
+          {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
+            <div className="main__victim-item" key={hero.id}>
+              <a className="main__victim-link" href={`/person/${hero.id}`}>
+                <img src={hero.photo} alt="victim" />
               </a>
-              <a href="/test">
-                <Button className="main__btns-war" buttonText="Шляхами війни" />
-              </a>
-            </div>
-            <form className="main__search">
-              <input
-                type="text"
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                placeholder="Введіть ім'я для пошуку..."
-              />
-            </form>
-            <div className="main__victim">
-              {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
-                <div className="main__victim-item" key={hero.id}>
-                  <a className="main__victim-link" href={`/person/${hero.id}`}>
-                    <img src={hero.photo} alt="victim" />
-                  </a>
 
-                  <div className="main__victim-details">
-                    <p>{hero.name}</p>
-                    <p>{hero.date}</p>
-                  </div>
-                </div>
-              ))}
+              <div className="main__victim-details">
+                <p>{hero.name}</p>
+                <p>{hero.date}</p>
+              </div>
             </div>
-            {filteredHeroes.length === 0 && (
-              <p className="nothing">Нікого не знайдено</p>
-            )}
-            {windowWidth < 575 && (
-              <Button
-                className="main__read-more-button"
-                buttonText="...далі"
-                handleMoreHeroes={showMoreHeroes}
-              />
-            )}
-            <div className="main__inf">
-              <p>Сайт працює у тестовому режимі.</p>
-              <p>Зауваження та пропозиції просимо надсилати за формою:</p>
-            </div>
-            <Contacts />
-          </>
+          ))}
+        </div>
+        {filteredHeroes.length === 0 && (
+          <p className="nothing">Нікого не знайдено</p>
         )}
+        {windowWidth < 575 && (
+          <Button
+            className="main__read-more-button"
+            buttonText="...далі"
+            handleMoreHeroes={showMoreHeroes}
+          />
+        )}
+        <div className="main__inf">
+          <p>Сайт працює у тестовому режимі.</p>
+          <p>Зауваження та пропозиції просимо надсилати за формою:</p>
+        </div>
+        <Contacts />
+        <div className="main__footer">
+          <a className="main__link" href="#">
+            <ButtonFb buttonText="Поширити у фейсбук" />
+          </a>
+        </div>
       </div>
     </section>
   );
 };
 
 export default MainPage;
-
-{
-  /* <div className="main__footer">
-          <a className="main__link" href="#">
-            <ButtonFb buttonText="Поширити у фейсбук" />
-          </a>
-        </div> */
-}

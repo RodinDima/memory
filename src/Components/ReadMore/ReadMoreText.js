@@ -16,7 +16,7 @@ const ReadMoreText = ({shortContent, longContent }) => {
           className="btn-text"
           onClick={() => setCollapse((prev) => !prev)}
         >
-          {collapse ? "скрити" : "читати далі"}
+          {collapse ? "приховати" : "читати далі"}
         </button>
       </div>
     );

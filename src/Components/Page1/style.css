@@ -20,12 +20,18 @@ body {
   background-image: url(./Images/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'e-Ukraine-Regular', sans-serif;
+  font-family: "e-Ukraine-Regular", sans-serif;
 }
 
 .logo {
   display: block;
   margin-bottom: 30px;
+}
+.logo svg {
+  transition: all .5s;
+}
+.logo svg:hover{
+  scale: 1.05;
 }
 .victim__content {
   display: flex;
@@ -33,7 +39,12 @@ body {
 .victim__img {
   width: 400px;
   margin-right: 50px;
+  transition: all .5s;
 }
+.victim__img:hover{
+scale: 1.01;
+}
+
 .img {
   width: 400px;
   margin-bottom: 20px;
@@ -54,6 +65,22 @@ body {
   text-align: left;
 }
 
+.petition {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+  background-color: rgba(255, 0, 0, 0.267);
+  transition: all 0.5s;
+  padding: 7px;
+  border-radius: 30px;
+}
+
+.petition:hover {
+  background-color: rgba(255, 0, 0, 0.425);
+}
+@media (max-width: 1100px) {
+  .petition{font-size: 22px;
+}}
 @media (max-width: 992px) {
   .victim__life {
     font-size: 28px;
@@ -78,10 +105,14 @@ body {
     margin-bottom: 20px;
     font-size: 16px;
   }
+  .petition{font-size: 18px;
+  }
 }
 @media (max-width: 473px) {
   .victim__img {
     width: 300px;
+  }
+  .petition{font-size: 15px;
   }
 }
 @media (max-width: 383px) {
@@ -90,5 +121,7 @@ body {
   }
   .logo {
     margin-bottom: 0;
+  }
+  .petition{font-size: 11px;
   }
 }

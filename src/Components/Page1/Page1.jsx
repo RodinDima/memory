@@ -29,7 +29,7 @@ const Page1 = () => {
 
   const currentUrl = location.pathname;
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-    currentUrl
+    window.location.origin + currentUrl
   )}`;
 
   return (
@@ -61,11 +61,17 @@ const Page1 = () => {
             <p key={index}>{selectedHero.texts[key]}</p>
           ))}
         </div>
+        {selectedHero.petitionLink && (
+          <a className="petition" href={selectedHero.petitionLink}>
+            {selectedHero.petitionText}
+          </a>
+        )}
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
-        {/* <ButtonFb
+
+        <ButtonFb
           buttonText="Поширити у фейсбук"
           facebookShareUrl={facebookShareUrl}
-        /> */}
+        />
       </div>
     </section>
   );
