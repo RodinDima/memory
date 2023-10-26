@@ -34,10 +34,6 @@
   margin-top: 30px;
 }
 
-.typewriter-text {
-  margin-bottom: 50px;
-
-}
 .main__search input {
   width: 100%;
   border-radius: 50px;
@@ -71,7 +67,7 @@
   cursor: pointer;
   max-width: 275px;
   height: 275px;
- }
+}
 .main__victim-item:hover {
   border: 3px solid red;
 }
@@ -167,6 +163,60 @@
   opacity: 1;
 }
 
+.header__logo-herb {
+  display: inline-block;
+  align-items: start;
+  padding-right: 15px;
+  border-right: 1px solid white;
+}
+.header__logo-herb img {
+  height: 100px;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+.header__logo-herb img:hover {
+  filter: grayscale(0);
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__logo-zsu {
+}
+.header__logo-zsu img {
+  height: 120px;
+  width: auto;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  color: white;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: end;
+}
+.menu__list {
+  display: flex;
+  gap: 15px;
+}
+.menu__item {
+  list-style: none;
+  transition: all 0.5s;
+}
+.menu__link {
+}
+
+.menu__item:hover {
+  opacity: 1;
+}
+
 @media (max-width: 1228px) {
   .main__btns {
     flex-direction: column;
@@ -204,30 +254,39 @@
   }
 }
 
-@media (max-width: 679px){
-  .main__btns-help, .main__btns-war{
+@media (max-width: 679px) {
+  .main__btns-help,
+  .main__btns-war {
     font-size: 23px;
   }
-
 }
-@media (max-width: 505px){
-  .main__btns-help, .main__btns-war{
+@media (max-width: 545px) {
+  .header__left img {
+    height: 75px;
+  }
+  .header {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 505px) {
+  .main__btns-help,
+  .main__btns-war {
     font-size: 19px;
     margin-bottom: 20px;
   }
-
 }
-@media (max-width: 439px){
-  .main__btns-help, .main__btns-war{
+@media (max-width: 439px) {
+  .main__btns-help,
+  .main__btns-war {
     font-size: 16px;
   }
-
 }
-@media (max-width: 389px){
-  .main__btns-help, .main__btns-war{
+@media (max-width: 389px) {
+  .main__btns-help,
+  .main__btns-war {
     font-size: 12px;
   }
-
 }
 
 @media (max-width: 576px) {
@@ -265,5 +324,8 @@
   }
   .main__title {
     font-size: 16px;
+  }
+  .header__left img {
+    height: 55px;
   }
 }

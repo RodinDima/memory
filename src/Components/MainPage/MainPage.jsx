@@ -14,6 +14,9 @@ import { Hourglass } from "react-loader-spinner";
 
 import ButtonFb from "../ButtonFb/ButtonFb";
 
+import Logo from "./Images/logo.png";
+import Zsu from "./Images/zsu.png";
+
 import "./style.css";
 //import { Accordion } from "../Accordion/Accordion";
 //import Faq from "../Faq/Faq";
@@ -89,7 +92,38 @@ const MainPage = () => {
           </div>
         ) : (
           <>*/}
+
+        <header className="header">
+          <div className="header__left">
+            <div className="header__logo-herb">
+              <a target="blanc" href="https://vilnogirsk-rada.gov.ua/">
+                <img src={Logo} alt="Вільногірська міська рада" />
+              </a>
+            </div>
+            <div className="header__logo-zsu">
+              <a target="blanc" href="https://www.zsu.gov.ua/">
+                <img src={Zsu} alt="Збройні сили України" />
+              </a>
+            </div>
+          </div>
+          {/*<nav className="menu">
+            <ul className="menu__list">
+              <li className="menu__item">
+                <a className="menu__link" href="#">
+                  Про проєкт
+                </a>
+              </li>
+              <li className="menu__item">
+                <a className="menu__link" href="#">
+                  Допомогти проєкту
+                </a>
+              </li>
+            </ul>
+          </nav>*/}
+        </header>
+
         <TypingAnimation />
+
         {/*<Faq/>*/}
         <ReadMore />
         {/*<ControlledAccordions/>*/}
