@@ -7,7 +7,7 @@
 
 .cursor-blink {
   display: inline-block;
-  width: 8px; 
+  width: 8px;
   height: 18px;
   color: red;
   animation: blink-caret 0.95s step-end infinite;
@@ -22,11 +22,14 @@
     opacity: 1;
   }
 }
-
+@media (max-width: 575px) {
+  .typewriter-text {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 545px) {
   .typewriter-text {
     font-size: 36px;
-    
   }
 }
 @media (max-width: 400px) {

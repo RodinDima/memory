@@ -259,6 +259,9 @@
   .main__btns-war {
     font-size: 23px;
   }
+  .menu{
+    display: none;
+  }
 }
 @media (max-width: 545px) {
   .header__left img {

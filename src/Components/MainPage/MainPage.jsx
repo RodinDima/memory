@@ -18,6 +18,7 @@ import Logo from "./Images/logo.png";
 import Zsu from "./Images/zsu.png";
 
 import "./style.css";
+import Burger from "../Burger/Burger";
 //import { Accordion } from "../Accordion/Accordion";
 //import Faq from "../Faq/Faq";
 
@@ -106,26 +107,28 @@ const MainPage = () => {
               </a>
             </div>
           </div>
-          {/*<nav className="menu">
+          <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item">
-                <a className="menu__link" href="#">
+                <a className="menu__link" href="/Pro_proekt">
                   Про проєкт
                 </a>
               </li>
               <li className="menu__item">
-                <a className="menu__link" href="#">
+                <a className="menu__link" href="/helpProject">
                   Допомогти проєкту
                 </a>
               </li>
             </ul>
-          </nav>*/}
+          </nav>
         </header>
+
+        <Burger/>
 
         <TypingAnimation />
 
         {/*<Faq/>*/}
-        <ReadMore />
+        {/*<ReadMore />*/}
         {/*<ControlledAccordions/>*/}
         <div className="main__btns">
           <a href="/Help">

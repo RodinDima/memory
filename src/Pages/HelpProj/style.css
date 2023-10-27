@@ -1,0 +1,52 @@
+body {
+  background-size: cover;
+}
+.Proj__container {
+  height: 100vh;
+}
+.proj__title {
+  margin-top: 100px;
+  text-align: start;
+  margin-bottom: 30px;
+}
+.proj__text {
+  text-align: start;
+}
+
+.proj__text p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.popup {
+  background: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  opacity: 0.9;
+}
+.proj__link {
+  color: red;
+  transition: all 0.5s;
+}
+.proj__link:hover {
+  color: rgb(99, 2, 2);
+}
+
+@media (max-width: 750px) {
+  .Proj__container {
+    font-size: 14px;
+  }
+  .proj__title {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 420px) {
+  .proj__title {
+    margin-top: 0;
+  }
+}

@@ -12,6 +12,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Test from "./Pages/Test/Test";
 import Help from "./Pages/Help/Help";
+import HelpProj from "./Pages/HelpProj/HelpProj";
+import ProProekt from "./Pages/ProProekt/ProProekt";
 //import FinalForm from "./Pages/FinalForm/FinalForm";
 
 
@@ -33,10 +35,14 @@ const router = createBrowserRouter([
     path: "/Help",
     element: <Help />,
   },
-  //{
-  //  path: "/333",
-  //  element: <FinalForm />,
-  //},
+  {
+    path: "/helpProject",
+    element: <HelpProj/>,
+  },
+  {
+    path: "/Pro_proekt",
+    element: <ProProekt/>,
+  },
   
 ]);
 

@@ -1,22 +1,64 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 import "./style.css";
+import Logo from "../../Components/Logo/Logo";
 
 const HelpProj = () => {
-	return (
+  const resourceLink = "https://vilnohirsk-memory.com";
+  const resourceLinkRef = useRef(null);
+  const [isCopied, setIsCopied] = useState(false);
+
+  const copyResourceLink = () => {
+    if (resourceLinkRef.current) {
+      resourceLinkRef.current.focus();
+
+      setIsCopied(true);
+
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    }
+  };
+
+  return (
     <section className="Proj__container">
+      <Logo />
       <h3 className="proj__title">
         Підтримайте портал пам’яті одним із наступних способів:
       </h3>
       <div className="proj__text">
         <p>
           Інформаційна підтримка: розкажіть про наш проєкт на своїй сторінці в
-          соціальній мережі, друзям або знайомим.{" "}
+          соціальній мережі, друзям або знайомим.
         </p>
         <p>
-          Поставте посилання на наш ресурс
-          https://vilnogirsk-rada.gov.ua/pamyatayemo/ там, де це буде доречно.
+          Поставте посилання на наш ресурс{" "}
+          <span
+            className="proj__link"
+            ref={resourceLinkRef}
+            contentEditable={true}
+            style={{ cursor: "pointer" }}
+            onClick={copyResourceLink}
+          >
+            {resourceLink}
+          </span>{" "}
+          там, де це буде доречно.{" "}
         </p>
+        <p>
+          Тематична підтримка: світлини воїнів, загиблих у ході
+          російсько-української війни, фото меморіалів, пам‘ятників,
+          меморіальних знаків, особисту інформацію про Героїв, спогади про них
+          рідних, друзів, колег, побратимів надсилайте на нашу електронну
+          скриньку:{" "}
+          <a href="mailto:memoryvilnohirsk2023@gmail.com">
+            memoryvilnohirsk2023@gmail.com
+          </a>
+        </p>
+        <p>
+          Будемо вдячні, якщо Ви знайшли помилки або невідповідності і
+          повідомили про це нам.
+        </p>
+        {isCopied && <div className="popup">Посилання скопійовано!</div>}
       </div>
     </section>
   );
