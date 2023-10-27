@@ -121,9 +121,8 @@ const MainPage = () => {
               </li>
             </ul>
           </nav>
+          <Burger />
         </header>
-
-        <Burger/>
 
         <TypingAnimation />
 

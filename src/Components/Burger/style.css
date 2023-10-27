@@ -4,8 +4,8 @@
   overflow: hidden;
   transform: translate3d(110vw, 0, 0);
   transition: visibility 0s linear 800ms,
-  transform 800ms cubic-bezier(0.535, 0, 0, 1) 0s;
-  background-color: #fdc021;
+    transform 800ms cubic-bezier(0.535, 0, 0, 1) 0s;
+  background-color: #423001;
   top: 0;
   bottom: 0;
   right: 0;
@@ -46,7 +46,7 @@
       transform 800ms cubic-bezier(0.535, 0, 0, 1) 0s;
   }
   .header__mobile .menu__item a {
-    color: rgb(2, 2, 2);
+    color: rgb(255, 255, 255);
     font-size: 4vh;
     padding: 20px 0;
   }
