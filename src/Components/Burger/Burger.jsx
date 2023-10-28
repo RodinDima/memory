@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import "./style.css";
 
 const Burger = () => {
@@ -12,13 +13,13 @@ const Burger = () => {
     const body = document.body;
 
     if (open) {
-      body.style.overflow = "hidden"; 
+      body.style.overflow = "hidden";
     } else {
-      body.style.overflow = "auto"; 
+      body.style.overflow = "auto";
     }
 
     return () => {
-     body.style.overflow = "auto";
+      body.style.overflow = "auto";
     };
   }, [open]);
 
