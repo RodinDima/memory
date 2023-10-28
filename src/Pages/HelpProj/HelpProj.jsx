@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-
 import "./style.css";
 import Logo from "../../Components/Logo/Logo";
 
@@ -9,15 +8,18 @@ const HelpProj = () => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyResourceLink = () => {
-    if (resourceLinkRef.current) {
-      resourceLinkRef.current.focus();
+    const textField = document.createElement("textarea");
+    textField.innerText = resourceLink;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
 
-      setIsCopied(true);
+    setIsCopied(true);
 
-      setTimeout(() => {
-        setIsCopied(false);
-      }, 2000);
-    }
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
   };
 
   return (
@@ -35,8 +37,6 @@ const HelpProj = () => {
           Поставте посилання на наш ресурс{" "}
           <span
             className="proj__link"
-            ref={resourceLinkRef}
-            contentEditable={true}
             style={{ cursor: "pointer" }}
             onClick={copyResourceLink}
           >
