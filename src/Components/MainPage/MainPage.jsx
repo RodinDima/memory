@@ -17,8 +17,9 @@ import ButtonFb from "../ButtonFb/ButtonFb";
 import Logo from "./Images/logo.png";
 import Zsu from "./Images/zsu.png";
 
-import "./style.css";
 import Burger from "../Burger/Burger";
+
+import "./style.css";
 //import { Accordion } from "../Accordion/Accordion";
 //import Faq from "../Faq/Faq";
 
@@ -121,7 +122,7 @@ const MainPage = () => {
               </li>
             </ul>
           </nav>
-          {/*<Burger />*/}
+          <Burger />
         </header>
 
         <TypingAnimation />

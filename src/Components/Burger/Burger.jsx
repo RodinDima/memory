@@ -1,40 +1,45 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import "./style.css";
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
 
-  const isActive = open ? "active" : "";
-
   const toggleMenu = () => {
-    if (open) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
+    setOpen(!open);
   };
 
-  console.log("isActive", isActive);
+  useEffect(() => {
+    const body = document.body;
+
+    if (open) {
+      body.style.overflow = "hidden"; 
+    } else {
+      body.style.overflow = "auto"; 
+    }
+
+    return () => {
+     body.style.overflow = "auto";
+    };
+  }, [open]);
 
   return (
     <>
       <button
-        className={`menu__btn ${isActive ? "menu--open" : ""}`}
+        className={`menu__btn ${open ? "menu--open" : ""}`}
         onClick={toggleMenu}
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul className={`header__mobile ${isActive}`}>
+      <ul className={`header__mobile ${open ? "active" : ""}`}>
         <li className="menu__item">
-          <a href="#" className="menu__item-text">
-           Про проєкт
+          <a href="/Pro_proekt" className="menu__item-text">
+            Про проєкт
           </a>
         </li>
         <li className="menu__item">
-          <a href="#" className="menu__item-text">
+          <a href="/helpProject" className="menu__item-text">
             Допомогти проєкту
           </a>
         </li>

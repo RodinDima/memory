@@ -5,7 +5,7 @@
   transform: translate3d(110vw, 0, 0);
   transition: visibility 0s linear 800ms,
     transform 800ms cubic-bezier(0.535, 0, 0, 1) 0s;
-  background-color: #423001;
+  background-color: #27231b;
   top: 0;
   bottom: 0;
   right: 0;
@@ -38,7 +38,9 @@
     z-index: 10;
     transition: transform 0.3s ease;
   }
-
+  .header__mobile {
+    margin: 0;
+  }
   .active {
     visibility: visible;
     transform: translate3d(0, 0, 0);
@@ -55,16 +57,7 @@
   }
 
   .menu__btn span {
-    color: white;
-  }
-
-  .header__container .header__content {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header__logo {
-    z-index: 7;
+    background-color: white;
   }
 }
 
