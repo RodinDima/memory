@@ -17,6 +17,10 @@ body {
 .proj__text {
   text-align: start;
 }
+
+.proj__text a{
+  color: red;
+}
 .proj__text p {
   margin-bottom: 20px;
   line-height: 1.8;
@@ -25,7 +29,6 @@ body {
   background: #000;
   color: #fff;
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   text-align: center;
@@ -35,6 +38,7 @@ body {
 .proj__link {
   color: red;
   transition: all 0.5s;
+  display: inline-block;
 }
 .proj__link:hover {
   color: rgb(99, 2, 2);
@@ -59,5 +63,9 @@ body {
 @media (max-width: 420px) {
   .proj__title {
     margin-top: 20px;
+    font-size: 16px;
+  }
+  .proj__text {
+    font-size: 14px;
   }
 }

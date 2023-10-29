@@ -3,6 +3,10 @@ import "./style.css";
 import Logo from "../../Components/Logo/Logo";
 import Button from "../../Components/Button/Button";
 
+import { TiLink } from "react-icons/ti";
+import { AiOutlineCheck } from "react-icons/ai";
+
+
 const HelpProj = () => {
   const resourceLink = "https://vilnohirsk-memory.com";
 
@@ -17,10 +21,6 @@ const HelpProj = () => {
     textField.remove();
 
     setIsCopied(true);
-
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
   };
 
   return (
@@ -35,22 +35,29 @@ const HelpProj = () => {
           соціальній мережі, друзям або знайомим.
         </p>
         <p>
-          Поставте посилання на наш ресурс
+          Поставте посилання на наш ресурс там, де це буде доречно.{" "}
           <span
             className="proj__link"
-            style={{ cursor: "pointer", marginLeft: "5px", marginRight: "5px" }}
+            style={{ cursor: "pointer",alignItems: "center" }}
             onClick={copyResourceLink}
+            title="Натисніть для копіювання посилання"
           >
-            {resourceLink}
+            {isCopied ? (
+              <><AiOutlineCheck/> Посилання зкопійоване</>
+            ) : (
+              <>
+                <TiLink /> https://vilnohirsk-memory.com
+              </>
+            )}
           </span>
-          там, де це буде доречно.
         </p>
+
         <p>
           Тематична підтримка: світлини воїнів, загиблих у ході
           російсько-української війни, фото меморіалів, пам‘ятників,
           меморіальних знаків, особисту інформацію про Героїв, спогади про них
           рідних, друзів, колег, побратимів надсилайте на нашу електронну
-          скриньку:
+          скриньку:<br></br>
           <a href="mailto:memoryvilnohirsk2023@gmail.com">
             memoryvilnohirsk2023@gmail.com
           </a>
@@ -59,7 +66,6 @@ const HelpProj = () => {
           Будемо вдячні, якщо Ви знайшли помилки або невідповідності і
           повідомили про це нам.
         </p>
-        {isCopied && <div className="popup">Посилання скопійовано!</div>}
       </div>
       <a className="proj-btn" href="/">
         <Button className="help-btn" buttonText="Повернутись назад" />
