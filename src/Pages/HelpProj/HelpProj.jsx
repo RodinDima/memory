@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import Logo from "../../Components/Logo/Logo";
+import Button from "../../Components/Button/Button";
 
 const HelpProj = () => {
   const resourceLink = "https://vilnohirsk-memory.com";
-  const resourceLinkRef = useRef(null);
+
   const [isCopied, setIsCopied] = useState(false);
 
   const copyResourceLink = () => {
@@ -23,7 +24,7 @@ const HelpProj = () => {
   };
 
   return (
-    <section className="Proj__container">
+    <section className="proj__container">
       <Logo />
       <h3 className="proj__title">
         Підтримайте портал пам’яті одним із наступних способів:
@@ -34,22 +35,22 @@ const HelpProj = () => {
           соціальній мережі, друзям або знайомим.
         </p>
         <p>
-          Поставте посилання на наш ресурс{" "}
+          Поставте посилання на наш ресурс
           <span
             className="proj__link"
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", marginLeft: "5px", marginRight: "5px" }}
             onClick={copyResourceLink}
           >
             {resourceLink}
-          </span>{" "}
-          там, де це буде доречно.{" "}
+          </span>
+          там, де це буде доречно.
         </p>
         <p>
           Тематична підтримка: світлини воїнів, загиблих у ході
           російсько-української війни, фото меморіалів, пам‘ятників,
           меморіальних знаків, особисту інформацію про Героїв, спогади про них
           рідних, друзів, колег, побратимів надсилайте на нашу електронну
-          скриньку:{" "}
+          скриньку:
           <a href="mailto:memoryvilnohirsk2023@gmail.com">
             memoryvilnohirsk2023@gmail.com
           </a>
@@ -60,6 +61,9 @@ const HelpProj = () => {
         </p>
         {isCopied && <div className="popup">Посилання скопійовано!</div>}
       </div>
+      <a className="proj-btn" href="/">
+        <Button className="help-btn" buttonText="Повернутись назад" />
+      </a>
     </section>
   );
 };

@@ -2,15 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import Button from "../Button/Button";
 
-import ReadMore from "../ReadMore/ReadMore";
-
 import { Hero } from "../Constants";
 
 import Contacts from "../Conatcts/Contacts";
 
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
-
-import { Hourglass } from "react-loader-spinner";
 
 import ButtonFb from "../ButtonFb/ButtonFb";
 
@@ -20,10 +16,6 @@ import Zsu from "./Images/zsu.png";
 import Burger from "../Burger/Burger";
 
 import "./style.css";
-//import { Accordion } from "../Accordion/Accordion";
-//import Faq from "../Faq/Faq";
-
-//import ControlledAccordions from "../Accord/Accord";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -31,22 +23,6 @@ const MainPage = () => {
   const [displayedHeroes, setDisplayedHeroes] = useState(3);
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  //useEffect(() => {
-  //  const isPageLoaded = sessionStorage.getItem("isPageLoaded");
-
-  //  if (isPageLoaded) {
-  //    setLoading(false);
-  //  } else {
-  //    setTimeout(() => {
-  //      setLoading(false);
-
-  //      sessionStorage.setItem("isPageLoaded", "true");
-  //    }, 2000);
-  //  }
-  //}, []);
-
-  //const [loading, setLoading] = useState(true);
 
   const filteredHeroes = Hero.filter((hero) =>
     hero.name.toLowerCase().includes(searchText.toLowerCase())
@@ -80,21 +56,6 @@ const MainPage = () => {
   return (
     <section className="main">
       <div className="main__container">
-        {/*{loading ? (
-          <div className="loader">
-            <Hourglass
-              visible={true}
-              height="80"
-              width="80"
-              ariaLabel="hourglass-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              colors={["#880000 ", "#FF0000 "]}
-            />
-          </div>
-        ) : (
-          <>*/}
-
         <header className="header">
           <div className="header__left">
             <div className="header__logo-herb">
@@ -126,10 +87,6 @@ const MainPage = () => {
         </header>
 
         <TypingAnimation />
-
-        {/*<Faq/>*/}
-        {/*<ReadMore />*/}
-        {/*<ControlledAccordions/>*/}
         <div className="main__btns">
           <a href="/Help">
             <Button

@@ -2,6 +2,7 @@ import React from "react";
 
 import "./style.css";
 import Logo from "../../Components/Logo/Logo";
+import Button from "../../Components/Button/Button";
 
 const ProProekt = () => {
   return (
@@ -39,6 +40,10 @@ const ProProekt = () => {
         </p>
         <p> Слава Україні! Героям слава!</p>
       </div>
+      <a href="/">
+        {" "}
+        <Button className="proekt-btn" buttonText="Повернутись назад" />
+      </a>
     </section>
   );
 };

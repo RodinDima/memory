@@ -1,20 +1,26 @@
 body {
   background-size: cover;
 }
+.proj__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-size: 100% 100%;
+}
+
 .proj__title {
-  margin-top: 100px;
+  margin-top: 75px;
   text-align: start;
   margin-bottom: 30px;
 }
 .proj__text {
   text-align: start;
 }
-
 .proj__text p {
   margin-bottom: 20px;
   line-height: 1.8;
 }
-
 .popup {
   background: #000;
   color: #fff;
@@ -33,7 +39,15 @@ body {
 .proj__link:hover {
   color: rgb(99, 2, 2);
 }
-
+.proj-btn {
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  .proj__container{
+    height: auto;
+  }
+}
 @media (max-width: 750px) {
   .Proj__container {
     font-size: 14px;
@@ -44,6 +58,6 @@ body {
 }
 @media (max-width: 420px) {
   .proj__title {
-    margin-top: 0;
+    margin-top: 20px;
   }
 }

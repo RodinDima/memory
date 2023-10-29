@@ -21,11 +21,13 @@ export default function ControlledAccordions() {
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
+        className={"test"}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
+          className="test2"
         >
           <Typography sx={{ width: "33%", flexShrink: 0 }}></Typography>
           <Typography sx={{ color: "text.secondary" }}>
