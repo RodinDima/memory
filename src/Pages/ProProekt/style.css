@@ -1,3 +1,14 @@
+.proekt__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.proekt__link{
+margin-top: auto;
+margin-bottom: 30px;}
+
+
 .proekt__title {
   text-align: start;
 }
@@ -7,6 +18,15 @@
 .proekt__text p {
   text-align: start;
   margin-bottom: 20px;
+}
+
+.proekt-btn{
+margin-top: auto;
+}
+@media (max-width: 1000px) {
+  .proekt__container{
+    height: auto;
+  }
 }
 
 @media (max-width: 550px) {

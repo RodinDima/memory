@@ -1,0 +1,87 @@
+.header__logo-herb {
+  display: inline-block;
+  align-items: start;
+  padding-right: 15px;
+  border-right: 1px solid white;
+}
+.header__logo-herb img {
+  height: 100px;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+.header__logo-herb img:hover {
+  filter: grayscale(0);
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__logo-zsu img {
+  height: 120px;
+  width: auto;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.menu {
+  display: flex;
+  justify-content: end;
+}
+.menu__list {
+  display: flex;
+  gap: 15px;
+}
+.menu__item {
+  list-style: none;
+  transition: all 0.5s;
+}
+
+.menu__item:hover {
+  opacity: 1;
+}
+.menu__link {
+  position: relative;
+}
+.menu__link:hover:before{
+  width: 100%;
+}
+.menu__link::before {
+  background-color: #ffffff;
+  bottom: -3px;
+  content: "";
+  height: 1.5px;
+  left: 0;
+  position: absolute;
+  transition: width 0.35s;
+  width: 0;
+}
+
+@media (max-width: 825px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 545px) {
+  .header__left img {
+    height: 75px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__left img {
+    height: 55px;
+  }
+}

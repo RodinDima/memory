@@ -40,7 +40,7 @@ const ProProekt = () => {
         </p>
         <p> Слава Україні! Героям слава!</p>
       </div>
-      <a href="/">
+      <a className="proekt__link" href="/">
         {" "}
         <Button className="proekt-btn" buttonText="Повернутись назад" />
       </a>

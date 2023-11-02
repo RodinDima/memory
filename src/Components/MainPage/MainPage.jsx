@@ -4,18 +4,12 @@ import Button from "../Button/Button";
 
 import { Hero } from "../Constants";
 
-import Contacts from "../Conatcts/Contacts";
-
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 
-import ButtonFb from "../ButtonFb/ButtonFb";
-
-import Logo from "./Images/logo.png";
-import Zsu from "./Images/zsu.png";
-
-import Burger from "../Burger/Burger";
-
 import "./style.css";
+
+import Footer from "../Footer/Footer.jsx";
+import Header from "../Header/Header";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -56,36 +50,7 @@ const MainPage = () => {
   return (
     <section className="main">
       <div className="main__container">
-        <header className="header">
-          <div className="header__left">
-            <div className="header__logo-herb">
-              <a target="blanc" href="https://vilnogirsk-rada.gov.ua/">
-                <img src={Logo} alt="Вільногірська міська рада" />
-              </a>
-            </div>
-            <div className="header__logo-zsu">
-              <a target="blanc" href="https://www.zsu.gov.ua/">
-                <img src={Zsu} alt="Збройні сили України" />
-              </a>
-            </div>
-          </div>
-          <nav className="menu">
-            <ul className="menu__list">
-              <li className="menu__item">
-                <a className="menu__link" href="/Pro_proekt">
-                  Про проєкт
-                </a>
-              </li>
-              <li className="menu__item">
-                <a className="menu__link" href="/helpProject">
-                  Допомогти проєкту
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <Burger />
-        </header>
-
+        <Header />
         <TypingAnimation />
         <div className="main__btns">
           <a href="/Help">
@@ -130,17 +95,8 @@ const MainPage = () => {
             handleMoreHeroes={showMoreHeroes}
           />
         )}
-        <div className="main__inf">
-          <p>Сайт працює у тестовому режимі.</p>
-          <p>Зауваження та пропозиції просимо надсилати за формою:</p>
-        </div>
-        <Contacts />
-        <div className="main__footer">
-          <a className="main__link" href="#">
-            <ButtonFb buttonText="Поширити у фейсбук" />
-          </a>
-        </div>
       </div>
+      <Footer />
     </section>
   );
 };

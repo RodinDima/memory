@@ -26,7 +26,7 @@
   transition: transform 0.3s ease;
 }
 
-@media (max-width: 679px) {
+@media (max-width: 825px) {
   .menu__btn {
     display: flex;
     flex-direction: column;

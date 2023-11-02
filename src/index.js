@@ -14,6 +14,7 @@ import Test from "./Pages/Test/Test";
 import Help from "./Pages/Help/Help";
 import HelpProj from "./Pages/HelpProj/HelpProj";
 import ProProekt from "./Pages/ProProekt/ProProekt";
+import Social from "./Pages/Social/Social";
 //import FinalForm from "./Pages/FinalForm/FinalForm";
 
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/Pro_proekt",
     element: <ProProekt/>,
+  },
+  {
+    path: "/social",
+    element: <Social/>,
   },
   
 ]);

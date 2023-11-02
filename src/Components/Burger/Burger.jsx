@@ -44,6 +44,11 @@ const Burger = () => {
             Допомогти проєкту
           </a>
         </li>
+        <li className="menu__item">
+          <a href="/social" className="menu__item-text">
+            Соціальна допомога
+          </a>
+        </li>
       </ul>
     </>
   );

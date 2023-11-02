@@ -16,7 +16,6 @@
 }
 @media (max-width: 1228px) {
   .btn {
-    width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -27,7 +26,6 @@
 }
 @media (max-width: 768px) {
   .btn {
-    width: 100%;
     margin-bottom: 30px;
   }
 }

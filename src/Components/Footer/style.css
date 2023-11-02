@@ -1,0 +1,30 @@
+.footer__container {
+}
+.footer__inf {
+  color: white;
+}
+.footer__inner {
+}
+.footer__link {
+}
+
+.footer__menu {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.footer__menu .menu__list {
+  justify-content: center;
+  padding: 0;
+}
+
+@media (max-width: 420px) {
+  .footer__menu .menu__list {
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .footer__inf {
+    font-size: 10px;
+  }
+}
