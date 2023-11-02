@@ -2,7 +2,7 @@ import React from "react";
 
 function DownloadLink() {
 
-  const filePath = "./src/1.doc";
+  const filePath = "/documents/1.doc";
 
   return (
     <div>

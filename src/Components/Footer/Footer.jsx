@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/helpProject">
+            <a className="menu__link" href="/social">
               Соціальна допомога
             </a>
           </li>
