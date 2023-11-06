@@ -15,6 +15,8 @@ import GloryTemplate from "../GloryTemplate/GloryTemplate";
 
 import ButtonFb from "../ButtonFb/ButtonFb";
 
+import Slider from "../Slider/Slider";
+
 import "./style.css";
 
 const Page1 = () => {
@@ -66,6 +68,10 @@ const Page1 = () => {
             {selectedHero.petitionText}
           </a>
         )}
+        {selectedHero.sliderImg && selectedHero.sliderImg.length > 0 && (
+          <Slider sliderImages={selectedHero.sliderImg} />
+        )}
+
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
 
         <ButtonFb

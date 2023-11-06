@@ -48,9 +48,7 @@ body {
   margin-bottom: 30px;
 }
 @media (max-width: 1000px) {
-  .social__container{
-    height: auto;
-  }
+
 }
 @media (max-width: 750px) {
   .social__container {
@@ -58,6 +56,11 @@ body {
   }
   .social__title {
     margin-top: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .social__container {
+    height: auto;
   }
 }
 @media (max-width: 420px) {

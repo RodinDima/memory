@@ -12,13 +12,15 @@
   color: white;
   text-align: center;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 .footer__menu .menu__list {
   justify-content: center;
   padding: 0;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .footer__menu .menu__list {
     flex-direction: column;
   }
