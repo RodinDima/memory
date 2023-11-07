@@ -7,10 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Navigation, Pagination } from "swiper/modules";
-import { Hero } from "../Constants";
 
 import "./style.css";
-
 
 function HeroSlider({ sliderImages }) {
   const imageStyles = {
@@ -18,7 +16,7 @@ function HeroSlider({ sliderImages }) {
     alignItems: "center",
     justifyContent: "center",
     width: "100%",
-    height: "100%",
+    maxHeight: "700px",
     objectFit: "cover",
     borderRadius: "20px",
   };
@@ -28,9 +26,6 @@ function HeroSlider({ sliderImages }) {
       spaceBetween={30}
       autoplay={true}
       navigation={true}
-      pagination={{
-        clickable: true,
-      }}
       modules={[EffectFade, Navigation, Pagination]}
       className="mySwiper"
     >
@@ -43,18 +38,14 @@ function HeroSlider({ sliderImages }) {
   );
 }
 
-export default function Slider() {
-  const heroesWithSlider = Hero.filter(
-    (hero) => hero.sliderImg && hero.sliderImg.length > 0
-  );
+export default function Slider({ sliderImages }) {
+  if (!sliderImages || sliderImages.length === 0) {
+    return null;
+  }
 
   return (
     <div>
-      {heroesWithSlider.map((hero) => (
-        <div key={hero.id}>
-          <HeroSlider sliderImages={hero.sliderImg} />
-        </div>
-      ))}
+      <HeroSlider sliderImages={sliderImages} />
     </div>
   );
 }
