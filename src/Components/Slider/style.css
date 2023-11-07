@@ -1,24 +1,74 @@
 .swiper-wrapper {
-	
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .swiper-slide-active {
-	
 }
 
-.swiper-button-next, .swiper-rtl .swiper-button-prev {
- right: var(--swiper-navigation-sides-offset, 40px) !important;
-background-color: white;
-padding: 20px;
-border-radius: 50px;}
- 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
- left: var(--swiper-navigation-sides-offset, 40px) !important;
-background-color: white;
-padding: 20px;
-border-radius: 50px;}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 40px) !important;
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+}
 
-.swiper-button-next.swiper-button-prev:hover{
-	background-color: rgb(230, 149, 149) !important;
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 40px) !important;
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.swiper-button-next.swiper-button-prev:hover {
+  background-color: rgb(230, 149, 149) !important;
+}
+
+:root {
+	 --swiper-theme-color: #ff002b !important;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --swiper-navigation-size: 20px !important;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --swiper-navigation-size: 15px !important;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    padding: 10px;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    padding: 10px;
+  }
+}
+@media (max-width: 530px) {
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 20px) !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 20px) !important;
+  }
+}
+@media (max-width: 430px) {
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 10px) !important;
+    padding: 5px;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 10px) !important;
+    padding: 5px;
+  }
 }

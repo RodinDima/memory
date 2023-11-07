@@ -11,6 +11,7 @@ import { Hero } from "../Constants";
 
 import "./style.css";
 
+
 function HeroSlider({ sliderImages }) {
   const imageStyles = {
     display: "flex",
@@ -19,16 +20,13 @@ function HeroSlider({ sliderImages }) {
     width: "100%",
     height: "100%",
     objectFit: "cover",
+    borderRadius: "20px",
   };
 
   return (
     <Swiper
       spaceBetween={30}
       autoplay={true}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-      }}
       navigation={true}
       pagination={{
         clickable: true,
