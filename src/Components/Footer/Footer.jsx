@@ -38,6 +38,11 @@ const Footer = () => {
               Соціальна допомога
             </a>
           </li>
+          <li className="menu__item">
+            <a className="menu__link" href="/petition">
+              Підпиши петицію
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

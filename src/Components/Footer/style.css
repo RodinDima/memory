@@ -1,13 +1,6 @@
-.footer__container {
-}
 .footer__inf {
   color: white;
 }
-.footer__inner {
-}
-.footer__link {
-}
-
 .footer__menu {
   color: white;
   text-align: center;
@@ -20,7 +13,7 @@
   padding: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
   .footer__menu .menu__list {
     flex-direction: column;
   }

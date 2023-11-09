@@ -65,7 +65,7 @@
   width: 0;
 }
 
-@media (max-width: 825px) {
+@media (max-width: 1000px) {
   .menu {
     display: none;
   }
