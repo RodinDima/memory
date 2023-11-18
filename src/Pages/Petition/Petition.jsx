@@ -34,18 +34,15 @@ const Petition = () => {
           <a
             className="petition-link"
             href="https://petition.president.gov.ua/petition/207464"
+            target="blanc"
           >
             Олександр Валерійович ЖЕЛТОНОГ
           </a>
-          <a
-            className="petition-link"
-            href="https://petition.president.gov.ua/petition/203834"
-          >
-            Віталій Вілійович ЛИСЯК
-          </a>
+          
           <a
             className="petition-link"
             href="https://petition.president.gov.ua/petition/206680"
+            target="blanc"
           >
             Павло Миколайович ПОСТОЛАКА
           </a>

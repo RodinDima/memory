@@ -64,7 +64,7 @@ const Page1 = () => {
           ))}
         </div>
         {selectedHero.petitionLink && (
-          <a className="petition" href={selectedHero.petitionLink}>
+          <a className="petition" target="blank" href={selectedHero.petitionLink}>
             {selectedHero.petitionText}
           </a>
         )}
