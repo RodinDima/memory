@@ -4,10 +4,12 @@ import Logo from "../../Components/Logo/Logo";
 import Button from "../../Components/Button/Button";
 
 import "./style.css";
+import Header from "../../Components/Header/Header";
 
 const Petition = () => {
   return (
     <section className="petition__container">
+      <Header className="custom-header" />
       <Logo />
       <h3 className="petition__title">
         Підпишімо петиції щодо удостоєння наших земляків звання Героя України
@@ -19,6 +21,7 @@ const Petition = () => {
           <a
             className="petition-link"
             href="https://petition.president.gov.ua/"
+            target="blanc"
           >
             https://petition.president.gov.ua/
           </a>
@@ -31,21 +34,24 @@ const Petition = () => {
         <p>
           Знову перейдіть за посиланням та підтримайте петицію щодо удостоєння
           званням Героя України (посмертно) :
-          <a
-            className="petition-link"
-            href="https://petition.president.gov.ua/petition/207464"
-            target="blanc"
-          >
-            Олександр Валерійович ЖЕЛТОНОГ
-          </a>
-          
-          <a
-            className="petition-link"
-            href="https://petition.president.gov.ua/petition/206680"
-            target="blanc"
-          >
-            Павло Миколайович ПОСТОЛАКА
-          </a>
+          <div>
+            <a
+              className="petition-link"
+              href="https://petition.president.gov.ua/petition/207464"
+              target="blanc"
+            >
+              Олександр Валерійович ЖЕЛТОНОГ
+            </a>
+          </div>
+          <div>
+            <a
+              className="petition-link"
+              href="https://petition.president.gov.ua/petition/206680"
+              target="blanc"
+            >
+              Павло Миколайович ПОСТОЛАКА
+            </a>
+          </div>
         </p>
         <p>
           Лише після цих дій ваша підтримка буде зарахованою, а петиція зможе

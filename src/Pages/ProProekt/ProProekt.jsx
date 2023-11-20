@@ -1,12 +1,15 @@
 import React from "react";
 
-import "./style.css";
 import Logo from "../../Components/Logo/Logo";
 import Button from "../../Components/Button/Button";
+import Header from "../../Components/Header/Header";
+
+import "./style.css";
 
 const ProProekt = () => {
   return (
     <section className="proekt__container">
+      <Header className="custom-header" />
       <Logo />
       <h3 className="proekt__title">Про проєкт:</h3>
       <div className="proekt__text">

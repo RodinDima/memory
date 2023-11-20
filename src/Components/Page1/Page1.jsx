@@ -18,6 +18,7 @@ import ButtonFb from "../ButtonFb/ButtonFb";
 import Slider from "../Slider/Slider";
 
 import "./style.css";
+import Button from "../Button/Button";
 
 const Page1 = () => {
   const { id } = useParams();
@@ -64,7 +65,11 @@ const Page1 = () => {
           ))}
         </div>
         {selectedHero.petitionLink && (
-          <a className="petition" target="blank" href={selectedHero.petitionLink}>
+          <a
+            className="petition"
+            target="blank"
+            href={selectedHero.petitionLink}
+          >
             {selectedHero.petitionText}
           </a>
         )}
@@ -73,11 +78,13 @@ const Page1 = () => {
         )}
 
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
-
-        <ButtonFb
+        <a className="social-btn" href="/">
+          <Button className="help-btn" buttonText="Повернутись назад" />
+        </a>
+        {/*<ButtonFb
           buttonText="Поширити у фейсбук"
           facebookShareUrl={facebookShareUrl}
-        />
+        />*/}
       </div>
     </section>
   );

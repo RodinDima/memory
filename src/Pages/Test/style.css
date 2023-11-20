@@ -1,7 +1,7 @@
 .video__container {
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+ 
+  
 }
 
 .video {
@@ -23,6 +23,12 @@
   width: 720px;
   height: 405px;
   position: relative;
+}
+.video-inner {
+  margin-bottom: 30px;
+}
+.help-btn {
+  margin-bottom: 30px;
 }
 
 @media (max-width: 768px) {

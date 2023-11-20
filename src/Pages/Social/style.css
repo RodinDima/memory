@@ -18,7 +18,7 @@ body {
   text-align: start;
 }
 
-.social__text a{
+.social__text a {
   color: red;
 }
 .social__text p {
@@ -47,8 +47,20 @@ body {
   margin-top: auto;
   margin-bottom: 30px;
 }
-@media (max-width: 1000px) {
-
+.custom-header {
+  margin-bottom: 0;
+  color: #000;
+}
+.custom-header .menu__link::before {
+  background-color: #0000007a;
+}
+.custom-header span {
+  background-color: #443c3c;
+}
+@media (max-width: 1300px) {
+   .social__container{
+    height: auto;
+   }
 }
 @media (max-width: 750px) {
   .social__container {

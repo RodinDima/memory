@@ -5,6 +5,7 @@ import Button from "../../Components/Button/Button";
 
 import { TiLink } from "react-icons/ti";
 import { AiOutlineCheck } from "react-icons/ai";
+import Header from "../../Components/Header/Header";
 
 
 const HelpProj = () => {
@@ -25,6 +26,7 @@ const HelpProj = () => {
 
   return (
     <section className="proj__container">
+      <Header className="custom-header" />
       <Logo />
       <h3 className="proj__title">
         Підтримайте портал пам’яті одним із наступних способів:
@@ -38,12 +40,14 @@ const HelpProj = () => {
           Поставте посилання на наш ресурс там, де це буде доречно.{" "}
           <span
             className="proj__link"
-            style={{ cursor: "pointer",alignItems: "center" }}
+            style={{ cursor: "pointer", alignItems: "center" }}
             onClick={copyResourceLink}
             title="Натисніть для копіювання посилання"
           >
             {isCopied ? (
-              <><AiOutlineCheck/> Посилання зкопійоване</>
+              <>
+                <AiOutlineCheck /> Посилання зкопійоване
+              </>
             ) : (
               <>
                 <TiLink /> https://vilnohirsk-memory.com

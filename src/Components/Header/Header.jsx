@@ -3,13 +3,15 @@ import React from "react";
 import Logo from "./Images/logo.png";
 import Zsu from "./Images/zsu.png";
 
+import classNames from "classnames";
+
 import Burger from "../Burger/Burger";
 
 import "./style.css";
 
-const Header = () => {
+const Header = ({ className }) => {
   return (
-    <header className="header">
+    <header className={`header ${className}`}>
       <div className="header__left">
         <div className="header__logo-herb">
           <a target="blanc" href="https://vilnogirsk-rada.gov.ua/">
@@ -25,22 +27,22 @@ const Header = () => {
       <nav className="menu">
         <ul className="menu__list">
           <li className="menu__item">
-            <a className="menu__link" href="/Pro_proekt">
+            <a className={`menu__link ${className}`} href="/Pro_proekt">
               Про проєкт
             </a>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/helpProject">
+            <a className={`menu__link ${className}`} href="/helpProject">
               Допомогти проєкту
             </a>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/social">
+            <a className={`menu__link ${className}`} href="/social">
               Соціальна допомога
             </a>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/petition">
+            <a className={`menu__link ${className}`} href="/petition">
               Підпиши петицію
             </a>
           </li>

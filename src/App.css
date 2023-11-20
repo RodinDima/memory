@@ -44,3 +44,12 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+body {
+  scrollbar-color: rgb(224, 4rgb(243, 7, 7) 255);
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(226, 13, 13);
+}

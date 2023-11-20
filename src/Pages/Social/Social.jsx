@@ -5,11 +5,14 @@ import Button from "../../Components/Button/Button";
 
 import "./style.css";
 import DownloadLink from "../../Components/DownloadLink/DownloadLink";
+import Header from "../../Components/Header/Header";
 
 const Social = () => {
   return (
     <section className="social__container">
+      <Header className="custom-header" />
       <Logo />
+
       <h3 className="social__title">
         Про допомогу військовим та їхнім родинам:
       </h3>
