@@ -16,7 +16,16 @@ const Test = () => {
         <h2 className="video__text">Шляхами війни</h2>
       </a>
 
-     <div className="video-inner">
+      <div className="video-inner">
+        <iframe
+          width="720"
+          height="469"
+          src="https://www.youtube.com/embed/TEV7zVxhMJ0?si=hacf08RxYX2_cmzP"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
         <iframe
           className="video-item"
           width="720"
@@ -27,7 +36,7 @@ const Test = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-  
+
         <iframe
           className="video-item"
           width="720"
@@ -38,7 +47,7 @@ const Test = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-  
+
         <iframe
           className="video-item"
           width="720"
@@ -49,7 +58,7 @@ const Test = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-  
+
         <iframe
           className="video-item"
           width="720"
@@ -60,8 +69,10 @@ const Test = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-     </div>
-      <a href="/"><Button className="help-btn" buttonText="Повернутись назад" /></a>
+      </div>
+      <a href="/">
+        <Button className="help-btn" buttonText="Повернутись назад" />
+      </a>
     </div>
   );
 };

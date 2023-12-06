@@ -45,59 +45,91 @@ import photo45 from "./Images/45.jpg";
 import photo46 from "./Images/46.jpg";
 import photo47 from "./Images/47.jpg";
 import photo48 from "./Images/48.jpg";
-import Hom1 from "./Images/Slider/Hom/1.jpg"
-import Hom2 from "./Images/Slider/Hom/2.jpg"
-import Hom3 from "./Images/Slider/Hom/3.jpg"
-import Hom4 from "./Images/Slider/Hom/4.jpg"
-import Hom5 from "./Images/Slider/Hom/5.jpg"
-import Hom6 from "./Images/Slider/Hom/6.jpg"
-import Hom8 from "./Images/Slider/Hom/8.jpg"
-import bandurchenko1 from "./Images/Slider/bandurchenko/1.jpg"
-import bandurchenko2 from "./Images/Slider/bandurchenko/2.jpg"
-import bandurchenko3 from "./Images/Slider/bandurchenko/3.jpg"
-import bandurchenko4 from "./Images/Slider/bandurchenko/4.jpg"
-import bandurchenko5 from "./Images/Slider/bandurchenko/5.jpg"
-import bandurchenko6 from "./Images/Slider/bandurchenko/6.jpg"
-import bandurchenko7 from "./Images/Slider/bandurchenko/7.jpg"
-import bandurchenko8 from "./Images/Slider/bandurchenko/8.jpg"
-import bandurchenko9 from "./Images/Slider/bandurchenko/9.jpg"
-import bandurchenko10 from "./Images/Slider/bandurchenko/10.jpg"
-import verhovodov1 from "./Images/Slider/verhovodov/1.jpg"
-import verhovodov2 from "./Images/Slider/verhovodov/2.jpg"
-import verhovodov3 from "./Images/Slider/verhovodov/3.jpg"
-import sribn1 from "./Images/Slider/Sribn/1.jpg"
-import sribn2 from "./Images/Slider/Sribn/2.jpg"
-import marcen1 from "./Images/Slider/Marcen/1.jpg"
-import marcen2 from "./Images/Slider/Marcen/2.jpg"
-import menshikov1 from "./Images/Slider/menshikov/1.jpg"
-import menshikov2 from "./Images/Slider/menshikov/2.jpg"
-import nosach1 from "./Images/Slider/nosach/1.jpg"
-import nosach2 from "./Images/Slider/nosach/2.jpg"
-import ostrouh1 from "./Images/Slider/ostrouh/1.jpg"
-import ostrouh2 from "./Images/Slider/ostrouh/2.jpg"
-import ostrouh3 from "./Images/Slider/ostrouh/3.jpg"
-import skala1 from "./Images/Slider/skala/1.jpg"
-import skala2 from "./Images/Slider/skala/2.jpg"
-import skala3 from "./Images/Slider/skala/3.jpg"
-import skala4 from "./Images/Slider/skala/4.jpg"
-import skala5 from "./Images/Slider/skala/5.jpg"
-import skala6 from "./Images/Slider/skala/6.jpg"
-import coy1 from "./Images/Slider/coy/1.jpg"
-import coy2 from "./Images/Slider/coy/2.jpg"
-import coy3 from "./Images/Slider/coy/3.jpg"
-import chernenko1 from "./Images/Slider/chernenko/1.jpg"
-import chernenko3 from "./Images/Slider/chernenko/3.jpg"
-import chernenko4 from "./Images/Slider/chernenko/4.jpg"
-import uhim1 from "./Images/Slider/uhim/1.jpg"
-import uhim2 from "./Images/Slider/uhim/2.jpg"
-import uhim3 from "./Images/Slider/uhim/3.jpg"
-import uhim4 from "./Images/Slider/uhim/4.jpg"
-import uhim5 from "./Images/Slider/uhim/5.jpg"
-import uhim6 from "./Images/Slider/uhim/6.jpg"
-
-
+import photo49 from "./Images/49.jpg";
+import Hom1 from "./Images/Slider/Hom/1.jpg";
+import Hom2 from "./Images/Slider/Hom/2.jpg";
+import Hom3 from "./Images/Slider/Hom/3.jpg";
+import Hom4 from "./Images/Slider/Hom/4.jpg";
+import Hom5 from "./Images/Slider/Hom/5.jpg";
+import Hom6 from "./Images/Slider/Hom/6.jpg";
+import Hom8 from "./Images/Slider/Hom/8.jpg";
+import bandurchenko1 from "./Images/Slider/bandurchenko/1.jpg";
+import bandurchenko2 from "./Images/Slider/bandurchenko/2.jpg";
+import bandurchenko3 from "./Images/Slider/bandurchenko/3.jpg";
+import bandurchenko4 from "./Images/Slider/bandurchenko/4.jpg";
+import bandurchenko5 from "./Images/Slider/bandurchenko/5.jpg";
+import bandurchenko6 from "./Images/Slider/bandurchenko/6.jpg";
+import bandurchenko7 from "./Images/Slider/bandurchenko/7.jpg";
+import bandurchenko8 from "./Images/Slider/bandurchenko/8.jpg";
+import bandurchenko9 from "./Images/Slider/bandurchenko/9.jpg";
+import bandurchenko10 from "./Images/Slider/bandurchenko/10.jpg";
+import verhovodov1 from "./Images/Slider/verhovodov/1.jpg";
+import verhovodov2 from "./Images/Slider/verhovodov/2.jpg";
+import verhovodov3 from "./Images/Slider/verhovodov/3.jpg";
+import sribn1 from "./Images/Slider/Sribn/1.jpg";
+import sribn2 from "./Images/Slider/Sribn/2.jpg";
+import marcen1 from "./Images/Slider/Marcen/1.jpg";
+import marcen2 from "./Images/Slider/Marcen/2.jpg";
+import menshikov1 from "./Images/Slider/menshikov/1.jpg";
+import menshikov2 from "./Images/Slider/menshikov/2.jpg";
+import nosach1 from "./Images/Slider/nosach/1.jpg";
+import nosach2 from "./Images/Slider/nosach/2.jpg";
+import ostrouh1 from "./Images/Slider/ostrouh/1.jpg";
+import ostrouh2 from "./Images/Slider/ostrouh/2.jpg";
+import ostrouh3 from "./Images/Slider/ostrouh/3.jpg";
+import skala1 from "./Images/Slider/skala/1.jpg";
+import skala2 from "./Images/Slider/skala/2.jpg";
+import skala3 from "./Images/Slider/skala/3.jpg";
+import skala4 from "./Images/Slider/skala/4.jpg";
+import skala5 from "./Images/Slider/skala/5.jpg";
+import skala6 from "./Images/Slider/skala/6.jpg";
+import coy1 from "./Images/Slider/coy/1.jpg";
+import coy2 from "./Images/Slider/coy/2.jpg";
+import coy3 from "./Images/Slider/coy/3.jpg";
+import chernenko1 from "./Images/Slider/chernenko/1.jpg";
+import chernenko3 from "./Images/Slider/chernenko/3.jpg";
+import chernenko4 from "./Images/Slider/chernenko/4.jpg";
+import uhim1 from "./Images/Slider/uhim/1.jpg";
+import uhim2 from "./Images/Slider/uhim/2.jpg";
+import uhim3 from "./Images/Slider/uhim/3.jpg";
+import uhim4 from "./Images/Slider/uhim/4.jpg";
+import uhim5 from "./Images/Slider/uhim/5.jpg";
+import uhim6 from "./Images/Slider/uhim/6.jpg";
 
 export const Hero = [
+  {
+    id: 49,
+    name: "Микола Вікторович БАБАКІН",
+    date: "27.10.1970 - 28.11.2023",
+    photo: photo49,
+    position: "старший солдат",
+    texts: [
+      "Вільногірець Микола Вікторович БАБАКІН навічно увійде в історію нашої громади, всієї України як Герой-визволитель, як вірний син Українського народу.",
+      "Його світле і чесне життя забрав клятий ворог.",
+      "Народився Микола 27 жовтня 1970 року у селищі Таромське Дніпропетровської області.",
+      "Навчався у місцевій середній школі №105, потім в СПТУ-15 від заводу ім. Петровського в обласному центрі.",
+      "Набув професію газоелектрозварника.",
+      "На зазначеному підприємстві розпочалась його трудова діяльність.",
+      "Як і більшість юнаків того часу, пройшов армійську підготовку.",
+      "Служив у внутрішніх військах у м. Золочів Львівської області.",
+      "З грудня 1993 року разом із родиною проживав у Вільногірську.",
+      "Працював на Вільногірському ГМК в ремонтно-механічному цеху, цеху водопостачання, на збагачувальному виробництві. Певний час їздив на заробітки за кордон.",
+      "Всі, хто знав Миколу Вікторовича, запам'ятають його як компанійську людину з гарним почуттям гумору, завжди сповненого оптимізму і доброти.",
+      "Коли розпочалася широкомасштабна російська агресія, вже 02 березня 2022 року Микола БАБАКІН пішов на фронт по мобілізації.",
+      "Його вроджене почуття справедливості і гідності відіграли не останню роль.",
+      "Вдома він так і сказав: -По-іншому не можу, не пробачив би собі, якби залишився тут.",
+      "Наш земляк пройшов нелегкий шлях. Він бив ворога у Красній Поляні, Волновасі, Вугледарі, під Бахмутом.",
+      "Навіть у короткострокові відпустки, які вдавалося отримати від командирів для поновлення сил, у період реабілітації після операції він волонтерив: замовляв для побратимів буржуйки на ГМК, збирав все необхідне для фронту у Вільногірську, Дніпрі, Запоріжжі.",
+      "На запитання, як там, на фронті, завжди заспокоював: -Все буде добре. Не переживайте!",
+      "Останнім часом брав участь у боях поблизу Авдіївки Донецької області.",
+      "Служив у Збройних Силах України старшим солдатом у складі мотопіхотного батальйону славетної 53-ої окремої механізованої бригади імені князя Володимира Мономаха.",
+      "28 листопада 2023 року став останнім днем життя Миколи Вікторовича БАБАКІНА.",
+      "Він до останньої хвилини залишився вірним військовій присязі, Українському народові, собі.",
+      "Щирі співчуття від усієї громади дружині і доньці воїна, всім його рідним, друзям, колегам, побратимам.",
+      "Його ім'я назавжди в наших серцях! Дякуємо за подвиг ціною в життя.",
+      "Вічна йому пам'ять і світлий спомин.",
+    ],
+  },
   {
     id: 2,
     name: "Владислав Сергійович БАДЕНКО",
@@ -459,7 +491,6 @@ export const Hero = [
       "Вічна пам’ять і невмируща слава вірним синам України.",
       "За особисту мужність і героїзм, виявлені у захисті державного суверенітету та територіальної цілісності України, вірність військовій присязі та незламність духу рішенням Вільногірської міської ради Дніпропетровської області № 1310-54/VIII від 26.10.2023 воїну присвоєно звання «Почесний громадянин Вільногірської міської територіальної громади» (посмертно).",
     ],
-    
   },
   {
     id: 15,
