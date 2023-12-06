@@ -18,8 +18,9 @@ const Test = () => {
 
       <div className="video-inner">
         <iframe
+          className="video-item"
           width="720"
-          height="469"
+          height="100%"
           src="https://www.youtube.com/embed/TEV7zVxhMJ0?si=hacf08RxYX2_cmzP"
           title="YouTube video player"
           frameborder="0"
