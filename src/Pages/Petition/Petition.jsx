@@ -43,15 +43,7 @@ const Petition = () => {
               Олександр Валерійович ЖЕЛТОНОГ
             </a>
           </div>
-          <div>
-            <a
-              className="petition-link"
-              href="https://petition.president.gov.ua/petition/206680"
-              target="blanc"
-            >
-              Павло Миколайович ПОСТОЛАКА
-            </a>
-          </div>
+        
         </p>
         <p>
           Лише після цих дій ваша підтримка буде зарахованою, а петиція зможе
