@@ -13,6 +13,21 @@
   padding: 0;
 }
 
+.footer__copy {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.copy{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media (max-width: 770px) {
   .footer__menu .menu__list {
     flex-direction: column;

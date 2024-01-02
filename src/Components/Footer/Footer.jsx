@@ -4,10 +4,12 @@ import Contacts from "../Conatcts/Contacts";
 
 import ButtonFb from "../ButtonFb/ButtonFb";
 
+import { FaRegCopyright } from "react-icons/fa6";
+
 import Header from "../Header/Header";
 
 import "./style.css";
-
+import TwitterBtn from "../Twitterbtn/Twitterbtn";
 
 const Footer = () => {
   return (
@@ -18,7 +20,8 @@ const Footer = () => {
       <Contacts />
       <div className="footer__inner">
         <a className="footer__link" href="#">
-          <ButtonFb buttonText="Поширити у фейсбук" />
+          <ButtonFb />
+          <TwitterBtn />
         </a>
       </div>
       <nav className="footer__menu">
@@ -45,6 +48,12 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
+      <div className="footer__copy">
+        <p>
+          © Портал пам'яті про загиблих і живих Героїв російсько-української
+          війни
+        </p>
+      </div>
     </div>
   );
 };

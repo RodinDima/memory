@@ -1,11 +1,14 @@
 import React from "react";
 
+import { FaFacebook } from "react-icons/fa";
+
+
 import cn from "classnames";
 
 import styles from "./style.module.css";
 
 const ButtonFb = (props) => {
-  const { className, buttonText } = props;
+  const { className} = props;
   const postUrl = "https://vilnohirsk-memory.com/";
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
     postUrl
@@ -17,7 +20,7 @@ const ButtonFb = (props) => {
 
   return (
     <button className={cn(styles.btn, className)} onClick={handleShareClick}>
-      {buttonText}
+      <FaFacebook />
     </button>
   );
 };

@@ -13,6 +13,7 @@ button svg{
   height: 60px;
    transition: 0.3s ease, 0.3s ease;
   fill: rgb(102, 97, 97);
+ 
 }
 button svg:hover{
   fill: white;

@@ -51,19 +51,6 @@
 .menu__link {
   position: relative;
 }
-.menu__link:hover:before{
-  width: 100%;
-}
-.menu__link::before {
-  background-color: #ffffff;
-  bottom: -3px;
-  content: "";
-  height: 1.5px;
-  left: 0;
-  position: absolute;
-  transition: width 0.35s;
-  width: 0;
-}
 
 @media (max-width: 1000px) {
   .menu {
