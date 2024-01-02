@@ -13,8 +13,6 @@ import { useLocation } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import GloryTemplate from "../GloryTemplate/GloryTemplate";
 
-import ButtonFb from "../ButtonFb/ButtonFb";
-
 import Slider from "../Slider/Slider";
 
 import "./style.css";

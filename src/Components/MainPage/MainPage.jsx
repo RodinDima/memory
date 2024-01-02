@@ -28,6 +28,7 @@ const MainPage = () => {
 
     setDisplayedHeroes(displayedHeroes + 3);
   };
+  const hasMoreHeroes = displayedHeroes < filteredHeroes.length;
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,7 +52,7 @@ const MainPage = () => {
   return (
     <section className="main">
       <div className="main__container">
-        <Header />
+        <Header className="main__header" />
         <TypingAnimation />
         <div className="main__btns">
           <a href="/Help">
@@ -89,7 +90,7 @@ const MainPage = () => {
         {filteredHeroes.length === 0 && (
           <p className="nothing">Нікого не знайдено</p>
         )}
-        {windowWidth < 575 && (
+        {windowWidth < 575 && hasMoreHeroes && (
           <Button
             className="main__read-more-button"
             buttonText="...далі"
@@ -98,7 +99,7 @@ const MainPage = () => {
         )}
       </div>
       <Footer />
-      <ScrollToTop/>
+      <ScrollToTop />
     </section>
   );
 };
