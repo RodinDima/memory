@@ -45,6 +45,7 @@ export default function Slider({ sliderImages }) {
 
   return (
     <div>
+      
       <HeroSlider sliderImages={sliderImages} />
     </div>
   );

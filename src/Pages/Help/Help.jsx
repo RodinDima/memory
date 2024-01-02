@@ -1,16 +1,22 @@
 import React from "react";
 
+import Header from "../../Components/Header/Header";
+
 import Button from "../../Components/Button/Button";
 
 import "./style.css";
+import Logo from "../../Components/Logo/Logo";
+
 
 const Help = () => {
   return (
     <div className="help__container">
+      <Header className="custom-header" />
+      <Logo />
       <h2 className="help__title">
         Роз'яснення куди звертатися у разі зникнення зв’язку із захисником
       </h2>
-      <a href="https://minre.gov.ua/">
+      <a className="help-link" href="https://minre.gov.ua/">
         Міністерство з питань реінтеграції тимчасово окупованих територій
         України
       </a>

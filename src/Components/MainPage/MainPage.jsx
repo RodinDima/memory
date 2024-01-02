@@ -10,6 +10,7 @@ import "./style.css";
 
 import Footer from "../Footer/Footer.jsx";
 import Header from "../Header/Header";
+import ScrollToTop from "../ScrollToTop/ScrollToTop.jsx";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -97,6 +98,7 @@ const MainPage = () => {
         )}
       </div>
       <Footer />
+      <ScrollToTop/>
     </section>
   );
 };

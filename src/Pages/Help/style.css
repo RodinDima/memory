@@ -3,7 +3,9 @@
   display: block;
   opacity: 0.6;
   transition: all 0.3s ease;
+ 
 }
+
 .help__title {
   margin-top: 60px;
 }
@@ -24,4 +26,9 @@ li {
   list-style: disc;
   text-align: start;
   opacity: 0.7;
+}
+.help-link{
+   text-transform: uppercase;
+  font-size: 20px;
+  text-align: start;
 }
