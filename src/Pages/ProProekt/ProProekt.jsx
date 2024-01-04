@@ -4,13 +4,19 @@ import Logo from "../../Components/Logo/Logo";
 import Button from "../../Components/Button/Button";
 import Header from "../../Components/Header/Header";
 
+import { GoArrowLeft } from "react-icons/go";
+
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const ProProekt = () => {
   return (
     <section className="proekt__container">
       <Header className="custom-header" />
       <Logo />
+      <Link to="/">
+        <GoArrowLeft className="link" />
+      </Link>
       <h3 className="proekt__title">Про проєкт:</h3>
       <div className="proekt__text">
         <p>
@@ -43,10 +49,6 @@ const ProProekt = () => {
         </p>
         <p> Слава Україні! Героям слава!</p>
       </div>
-      <a className="proekt__link" href="/">
-        {" "}
-        <Button className="proekt-btn" buttonText="Повернутись назад" />
-      </a>
     </section>
   );
 };

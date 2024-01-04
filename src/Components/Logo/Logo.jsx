@@ -3,10 +3,11 @@ import React from "react";
 import { ReactComponent as Logos } from "./Images/logo.svg"
 
 import style from "./logo.module.css";
+import { Link } from "react-router-dom";
 
 const Logo = ({ className }) => {
   return (
-    <a href="/"
+    <Link to="/"
       className={
         className !== undefined
           ? `${style["img"]} ${className}`
@@ -14,7 +15,7 @@ const Logo = ({ className }) => {
       }
     ><Logos />
      
-    </a>
+    </Link>
   );
 };
 

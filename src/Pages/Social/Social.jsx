@@ -2,17 +2,21 @@ import React from "react";
 
 import Logo from "../../Components/Logo/Logo";
 import Button from "../../Components/Button/Button";
+import { GoArrowLeft } from "react-icons/go";
 
 import "./style.css";
 import DownloadLink from "../../Components/DownloadLink/DownloadLink";
 import Header from "../../Components/Header/Header";
+import { Link } from "react-router-dom";
 
 const Social = () => {
   return (
     <section className="social__container">
       <Header className="custom-header" />
       <Logo />
-
+      <Link to="/">
+        <GoArrowLeft className="link" />
+      </Link>
       <h3 className="social__title">
         Про допомогу військовим та їхнім родинам:
       </h3>
@@ -39,9 +43,6 @@ const Social = () => {
 
         <p>Підтримуємо Збройні Сили України та віримо у перемогу!</p>
       </div>
-      <a className="social-btn" href="/">
-        <Button className="help-btn" buttonText="Повернутись назад" />
-      </a>
     </section>
   );
 };

@@ -6,7 +6,8 @@ import Button from "../../Components/Button/Button";
 import { TiLink } from "react-icons/ti";
 import { AiOutlineCheck } from "react-icons/ai";
 import Header from "../../Components/Header/Header";
-
+import { Link } from "react-router-dom";
+import { GoArrowLeft } from "react-icons/go";
 
 const HelpProj = () => {
   const resourceLink = "https://vilnohirsk-memory.com";
@@ -28,6 +29,9 @@ const HelpProj = () => {
     <section className="proj__container">
       <Header className="custom-header" />
       <Logo />
+      <Link to="/">
+        <GoArrowLeft className="link" />
+      </Link>
       <h3 className="proj__title">
         Підтримайте портал пам’яті одним із наступних способів:
       </h3>
@@ -71,9 +75,6 @@ const HelpProj = () => {
           повідомили про це нам.
         </p>
       </div>
-      <a className="proj-btn" href="/">
-        <Button className="help-btn" buttonText="Повернутись назад" />
-      </a>
     </section>
   );
 };

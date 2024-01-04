@@ -11,6 +11,7 @@ import "./style.css";
 import Footer from "../Footer/Footer.jsx";
 import Header from "../Header/Header";
 import ScrollToTop from "../ScrollToTop/ScrollToTop.jsx";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -55,15 +56,15 @@ const MainPage = () => {
         <Header className="main__header" />
         <TypingAnimation />
         <div className="main__btns">
-          <a href="/Help">
+          <Link to="/Help">
             <Button
               className="main__btns-help"
               buttonText="Допомога родинам зниклих безвісті"
             />
-          </a>
-          <a href="/test">
+          </Link>
+          <Link to="/test">
             <Button className="main__btns-war" buttonText="Шляхами війни" />
-          </a>
+          </Link>
         </div>
         <form className="main__search">
           <input
@@ -76,9 +77,13 @@ const MainPage = () => {
         <div className="main__victim">
           {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
             <div className="main__victim-item" key={hero.id}>
-              <a className="main__victim-link" href={`/person/${hero.id}`}>
+              <Link
+                className="main__victim-link"
+                to={`/person/${hero.id}`}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 <img src={hero.photo} alt="victim" />
-              </a>
+              </Link>
 
               <div className="main__victim-details">
                 <p>{hero.name}</p>

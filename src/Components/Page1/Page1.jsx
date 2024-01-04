@@ -7,7 +7,7 @@ import BiographyTemplate from "../BiographyTemplate/BiographyTemplate";
 
 import { Hero } from "../Constants";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
@@ -76,9 +76,9 @@ const Page1 = () => {
         )}
 
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
-        <a className="social-btn" href="/">
+        <Link className="social-btn" to="/">
           <Button className="help-btn" buttonText="Повернутись назад" />
-        </a>
+        </Link>
         {/*<ButtonFb
           buttonText="Поширити у фейсбук"
           facebookShareUrl={facebookShareUrl}

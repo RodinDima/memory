@@ -5,12 +5,17 @@ import Button from "../../Components/Button/Button";
 
 import "./style.css";
 import Header from "../../Components/Header/Header";
+import { Link } from "react-router-dom";
+import { GoArrowLeft } from "react-icons/go";
 
 const Petition = () => {
   return (
     <section className="petition__container">
       <Header className="custom-header" />
       <Logo />
+      <Link to="/">
+        <GoArrowLeft className="link" />
+      </Link>
       <h3 className="petition__title">
         Підпишімо петиції щодо удостоєння наших земляків звання Героя України
         (посмертно)!
@@ -43,7 +48,6 @@ const Petition = () => {
               Олександр Валерійович ЖЕЛТОНОГ
             </a>
           </div>
-        
         </p>
         <p>
           Лише після цих дій ваша підтримка буде зарахованою, а петиція зможе
@@ -51,10 +55,7 @@ const Petition = () => {
         </p>
         <p>Кожен ваш голос – це шана та вдячність Герою!</p>
       </div>
-      <a className="petition-btn" href="/">
-        <Button className="help-btn" buttonText="Повернутись назад" />
-      </a>
-    </section>
+     </section>
   );
 };
 

@@ -10,6 +10,7 @@ import Header from "../Header/Header";
 
 import "./style.css";
 import TwitterBtn from "../Twitterbtn/Twitterbtn";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -27,24 +28,24 @@ const Footer = () => {
       <nav className="footer__menu">
         <ul className="menu__list">
           <li className="menu__item">
-            <a className="menu__link" href="/Pro_proekt">
+            <Link className="menu__link" to="/Pro_proekt">
               Про проєкт
-            </a>
+            </Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/helpProject">
+            <Link className="menu__link" to="/helpProject">
               Допомогти проєкту
-            </a>
+            </Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/social">
+            <Link className="menu__link" to="/social">
               Соціальна допомога
-            </a>
+            </Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="/petition">
+            <Link className="menu__link" to="/petition">
               Підпиши петицію
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

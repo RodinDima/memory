@@ -7,14 +7,15 @@ import Header from "../../Components/Header/Header";
 
 import "./style.css";
 import Button from "../../Components/Button/Button";
+import { Link } from "react-router-dom";
 
 const Test = () => {
   return (
     <div className="video__container">
       <Header className="custom-header" />
-      <a href="/">
+      <Link to="/">
         <h2 className="video__text">Шляхами війни</h2>
-      </a>
+      </Link>
 
       <div className="video-inner">
         <iframe
@@ -71,9 +72,9 @@ const Test = () => {
           allowfullscreen
         ></iframe>
       </div>
-      <a href="/">
+      <Link to="/">
         <Button className="help-btn" buttonText="Повернутись назад" />
-      </a>
+      </Link>
     </div>
   );
 };

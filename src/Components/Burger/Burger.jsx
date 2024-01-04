@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
@@ -35,24 +36,24 @@ const Burger = () => {
       </button>
       <ul className={`header__mobile ${open ? "active" : ""}`}>
         <li className="menu__item">
-          <a href="/Pro_proekt" className="menu__item-text">
+          <Link to="/Pro_proekt" className="menu__item-text">
             Про проєкт
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="/helpProject" className="menu__item-text">
+          <Link to="/helpProject" className="menu__item-text">
             Допомогти проєкту
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="/social" className="menu__item-text">
+          <Link to="/social" className="menu__item-text">
             Соціальна допомога
-          </a>
+          </Link>
         </li>
         <li className="menu__item">
-          <a href="/petition" className="menu__item-text">
+          <Link to="/petition" className="menu__item-text">
             Підпиши петицію
-          </a>
+          </Link>
         </li>
       </ul>
     </>
