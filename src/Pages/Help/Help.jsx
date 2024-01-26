@@ -23,7 +23,7 @@ const Help = () => {
       <h2 className="help__title">
         Роз'яснення куди звертатися у разі зникнення зв’язку із захисником
       </h2>
-      <a className="help-link" href="https://minre.gov.ua/">
+      <a className="help-link" target="blanc" href="https://minre.gov.ua/">
         Міністерство з питань реінтеграції тимчасово окупованих територій
         України <MdArrowOutward className="arrow" />
       </a>

@@ -77,7 +77,11 @@ const Page1 = () => {
 
         <GloryTemplate className="victim__glory" text="Вічна слава герою!" />
         <Link className="social-btn" to="/">
-          <Button className="help-btn" buttonText="Повернутись назад" />
+          <Button
+            className="help-btn"
+            onClick={() => window.scrollTo(0, 0)}
+            buttonText="Повернутись назад"
+          />
         </Link>
         {/*<ButtonFb
           buttonText="Поширити у фейсбук"
