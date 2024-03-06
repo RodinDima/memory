@@ -2,24 +2,16 @@ import React from "react";
 
 import Header from "../../Components/Header/Header";
 
-import Button from "../../Components/Button/Button";
-
 import { MdArrowOutward } from "react-icons/md";
 
-import Logo from "../../Components/Logo/Logo";
-
 import "./style.css";
-import { Link } from "react-router-dom";
-import { GoArrowLeft } from "react-icons/go";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
 
 const Help = () => {
   return (
     <div className="help__container">
       <Header className="custom-header" />
-      <Logo />
-      <Link to="/">
-        <GoArrowLeft className="link" />
-      </Link>
+      <Breadcrumbs/>
       <h2 className="help__title">
         Роз'яснення куди звертатися у разі зникнення зв’язку із захисником
       </h2>
@@ -71,7 +63,6 @@ const Help = () => {
           гарячу лінію Міноборони за номером: 0 800 500 442.
         </p>
       </div>
-     
     </div>
   );
 };

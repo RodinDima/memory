@@ -4,9 +4,7 @@ body {
 .social__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-size: 100% 100%;
-  padding-bottom: 50px;
+  height: 100vh;
 }
 
 .social__title {
@@ -23,7 +21,6 @@ body {
 }
 .social__text p {
   margin-bottom: 20px;
-  
 }
 .popup {
   background: #000;
@@ -57,16 +54,16 @@ body {
 .custom-header span {
   background-color: #443c3c;
 }
-.link{
+.link {
   display: block;
   width: 50px;
   height: 50px;
 }
-@media (max-width: 1300px) {
+/*@media (max-width: 1000px) {
    .social__container{
     height: auto;
    }
-}
+}*/
 @media (max-width: 750px) {
   .social__container {
     font-size: 14px;
@@ -89,7 +86,8 @@ body {
   .social__text {
     font-size: 14px;
   }
-  .link{
+  .link {
     margin-top: 30px;
+    display: block;
   }
 }

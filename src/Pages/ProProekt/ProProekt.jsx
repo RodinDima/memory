@@ -1,22 +1,17 @@
 import React from "react";
 
-import Logo from "../../Components/Logo/Logo";
-import Button from "../../Components/Button/Button";
 import Header from "../../Components/Header/Header";
 
-import { GoArrowLeft } from "react-icons/go";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
 
 import "./style.css";
-import { Link } from "react-router-dom";
 
 const ProProekt = () => {
   return (
     <section className="proekt__container">
       <Header className="custom-header" />
-      <Logo />
-      <Link to="/">
-        <GoArrowLeft className="link" />
-      </Link>
+      <Breadcrumbs />
+      <div></div>
       <h3 className="proekt__title">Про проєкт:</h3>
       <div className="proekt__text">
         <p>

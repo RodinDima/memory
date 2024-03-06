@@ -1,22 +1,16 @@
 import React from "react";
 
-import Logo from "../../Components/Logo/Logo";
-import Button from "../../Components/Button/Button";
-import { GoArrowLeft } from "react-icons/go";
-
-import "./style.css";
 import DownloadLink from "../../Components/DownloadLink/DownloadLink";
 import Header from "../../Components/Header/Header";
-import { Link } from "react-router-dom";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
+
+import "./style.css";
 
 const Social = () => {
   return (
     <section className="social__container">
       <Header className="custom-header" />
-      <Logo />
-      <Link to="/">
-        <GoArrowLeft className="link" />
-      </Link>
+      <Breadcrumbs />
       <h3 className="social__title">
         Про допомогу військовим та їхнім родинам:
       </h3>

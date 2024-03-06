@@ -6,6 +6,7 @@ import { AiOutlineCheck } from "react-icons/ai";
 import Header from "../../Components/Header/Header";
 import { Link } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
+import Breadcrumbs from "../../Components/Breadcrumbs/Breadcrumbs";
 
 const HelpProj = () => {
   const resourceLink = "https://vilnohirsk-memory.com";
@@ -26,11 +27,8 @@ const HelpProj = () => {
   return (
     <section className="proj__container">
       <Header className="custom-header" />
-      {/*<Logo />*/}
+      <Breadcrumbs />
       <div>
-        <Link to="/">
-          <GoArrowLeft className="link" />
-        </Link>
         <h3 className="proj__title">
           Підтримайте портал пам’яті одним із наступних способів:
         </h3>
@@ -58,7 +56,7 @@ const HelpProj = () => {
               )}
             </span>
           </p>
-  
+
           <p>
             Тематична підтримка: світлини воїнів, загиблих у ході
             російсько-української війни, фото меморіалів, пам‘ятників,

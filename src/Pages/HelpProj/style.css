@@ -4,9 +4,7 @@ body {
 .proj__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-size: 100% 100%;
-  padding-bottom: 50px;
+  height: 100vh;
 }
 
 .proj__title {
@@ -45,11 +43,11 @@ body {
   margin-top: auto;
   margin-bottom: 30px;
 }
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
   .proj__container {
     height: auto;
   }
-}
+}*/
 @media (max-width: 750px) {
   .Proj__container {
     font-size: 14px;
