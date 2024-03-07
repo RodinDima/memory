@@ -12,6 +12,7 @@ import Footer from "../Footer/Footer.jsx";
 import Header from "../Header/Header";
 import ScrollToTop from "../ScrollToTop/ScrollToTop.jsx";
 import { Link } from "react-router-dom";
+import WarInfo from "../WarInfo/WarInfo.jsx";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -54,6 +55,7 @@ const MainPage = () => {
     <section className="main">
       <div className="main__container">
         <Header className="main__header" />
+        <WarInfo/>
         <TypingAnimation />
         <div className="main__btns">
           <Link to="/Help">

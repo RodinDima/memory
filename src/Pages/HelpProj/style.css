@@ -43,11 +43,12 @@ body {
   margin-top: auto;
   margin-bottom: 30px;
 }
-/*@media (max-width: 1000px) {
+@media (max-width: 500px) {
   .proj__container {
     height: auto;
+    padding-bottom: 70px;
   }
-}*/
+}
 @media (max-width: 750px) {
   .Proj__container {
     font-size: 14px;
