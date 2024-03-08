@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 const Anniversary = ({ Hero }) => {
-  // Отримуємо поточну дату
   const currentDate = new Date();
   const currentDay = currentDate.getDate();
-  const currentMonth = currentDate.getMonth() + 1; // Місяці починаються з 0, тому додаємо 1
+  const currentMonth = currentDate.getMonth() + 1;
 
-  // Фільтрація героїв за поточним днем і місяцем
   const filteredHeroes = Hero.filter((hero) => {
     const deathDateParts = hero.date.split(" - ")[1]?.split(".");
     if (deathDateParts) {
@@ -18,11 +16,9 @@ const Anniversary = ({ Hero }) => {
     }
     return false;
   });
-
-   if (filteredHeroes.length === 0) {
-     return null; 
-   }
-
+  if (filteredHeroes.length === 0) {
+    return null;
+  }
   return (
     <div className="anniversary-block">
       <div className="anniversary-title">Роковини смерті загиблих героїв</div>
