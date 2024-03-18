@@ -1,8 +1,13 @@
 .main {
-  background-image: url(./Images/mainbg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: "e-Ukraine-Regular", sans-serif;
+}
+.background-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./Images/mainbg.png);
+  background-size: cover;
 }
 .main__container {
   position: relative;
