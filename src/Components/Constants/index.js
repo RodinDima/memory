@@ -104,12 +104,11 @@ import uhim6 from "./Images/Slider/uhim/6.jpg";
 import romanov1 from "./Images/Slider/romanov/1.jpg";
 import romanov2 from "./Images/Slider/romanov/2.jpg";
 import romanov3 from "./Images/Slider/romanov/3.jpg";
-import romanov4 from "./Images/Slider/romanov/4.jpg";
+
 import romanov5 from "./Images/Slider/romanov/5.jpg";
-import romanov6 from "./Images/Slider/romanov/6.jpg";
+
 import romanov7 from "./Images/Slider/romanov/7.jpg";
 import romanov8 from "./Images/Slider/romanov/8.jpg";
-import romanov9 from "./Images/Slider/romanov/9.jpg";
 
 export const Hero = [
   {
@@ -908,17 +907,7 @@ export const Hero = [
       "Указом Президента України № 517/2023 Про відзначення державними нагородами України «за особисту мужність і самовіддані дії, виявлені у захисті державного суверенітету та територіальної цілісності України, вірність військовій присязі» Віталія Романовського нагороджено медаллю “За військову службу Україні”",
       "За особисту мужність і героїзм, виявлені у захисті державного суверенітету та територіальної цілісності України, вірність військовій присязі та незламність духу рішенням Вільногірської міської ради Дніпропетровської області № 1310-54/VIII від 26.10.2023 воїну присвоєно звання «Почесний громадянин Вільногірської міської територіальної громади» (посмертно).",
     ],
-    sliderImg: [
-      romanov1,
-      romanov2,
-      romanov3,
-      romanov4,
-      romanov5,
-      romanov6,
-      romanov7,
-      romanov8,
-      romanov9,
-    ],
+    sliderImg: [romanov1, romanov2, romanov3, romanov5, romanov7, romanov8],
   },
   {
     id: 47,
@@ -1142,7 +1131,7 @@ export const Hero = [
   {
     id: 31,
     name: "Віталій Ігорович ЦОЙ",
-    date: "22.09.1979 - 10.05.2022",
+    date: "22.09.1979 - 12.04.2022",
     photo: photo31,
     position: "сержант",
     texts: [
