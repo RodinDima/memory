@@ -71,6 +71,15 @@ const Page1 = () => {
             {selectedHero.petitionText}
           </a>
         )}
+        {selectedHero.Link && (
+          <a
+            className="petition"
+            target="blank"
+            href={selectedHero.Link}
+          >
+            {selectedHero.LinkText}
+          </a>
+        )}
         {selectedHero.sliderImg && selectedHero.sliderImg.length > 0 && (
           <Slider sliderImages={selectedHero.sliderImg} />
         )}
