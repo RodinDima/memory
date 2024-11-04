@@ -51,7 +51,7 @@ const HelpProj = () => {
                 </>
               ) : (
                 <>
-                  <TiLink /> https://vilnohirsk-memory.com
+                  <TiLink /> https://vilnohirsk-memory.org
                 </>
               )}
             </span>
@@ -63,8 +63,8 @@ const HelpProj = () => {
             меморіальних знаків, особисту інформацію про Героїв, спогади про них
             рідних, друзів, колег, побратимів надсилайте на нашу електронну
             скриньку:<br></br>
-            <a href="mailto:memoryvilnohirsk2023@gmail.com">
-              memoryvilnohirsk2023@gmail.com
+            <a href="mailto:memoryvilnohirsk2024@gmail.com">
+              memoryvilnohirsk2024@gmail.com
             </a>
           </p>
           <p>
