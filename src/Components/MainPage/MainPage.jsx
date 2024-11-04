@@ -14,6 +14,7 @@ import ScrollToTop from "../ScrollToTop/ScrollToTop.jsx";
 import { Link } from "react-router-dom";
 import WarInfo from "../WarInfo/WarInfo.jsx";
 import Anniversary from "../Annyversary/Anniversary.jsx";
+import AnniversaryMonth from "../AnniversaryMonth/AnniversaryMonth.jsx";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
@@ -60,6 +61,7 @@ const MainPage = () => {
           <WarInfo />
           <TypingAnimation />
           <Anniversary Hero={Hero} />
+          <AnniversaryMonth Hero={Hero} />
           <div className="main__btns">
             <Link to="/Help">
               <Button

@@ -1,0 +1,35 @@
+
+.anniversary-block{
+ 
+  transform-origin: top left;
+}
+.anniversary-title {
+  color: azure;
+  text-align: start;
+}
+.anniversary-list {
+  display: flex;
+  flex-wrap: wrap; 
+  text-align: center;
+  gap: 15px;
+  padding: 0;
+   /* Зменшення всіх елементів вдвічі */
+   /* Встановлення точки початку трансформації */
+}
+.anniversary-list li {
+  opacity: 1;
+  width: 300px;
+}
+.main__victim-details.anniversary p {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .anniversary-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .anniversary-title {
+    font-size: 14px;
+  }
+}
