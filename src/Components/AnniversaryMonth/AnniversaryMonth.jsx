@@ -28,7 +28,7 @@ const AnniversaryMonth = ({ Hero }) => {
 
   return (
     <div className="anniversary-block">
-      <div className="anniversary-title">Роковини смерті героїв цього місяця</div>
+      <div className="anniversary-title">Роковини смерті ГЕРОЇВ цього місяця</div>
       <ul className="anniversary-list">
         {sortedHeroes.map((hero) => (
           <li className="main__victim-item anniversary" key={hero.id}>

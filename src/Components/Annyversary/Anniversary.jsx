@@ -21,7 +21,7 @@ const Anniversary = ({ Hero }) => {
   }
   return (
     <div className="anniversary-block">
-      <div className="anniversary-title">Роковини смерті загиблих героїв</div>
+      <div className="anniversary-title">Роковини смерті загиблих ГЕРОЇВ</div>
       <ul className="anniversary-list">
         {filteredHeroes.map((hero) => (
           <li className="main__victim-item anniversary" key={hero.id}>
