@@ -54,8 +54,8 @@
 .sort:hover{
   background-color: #3b3b3b;
 }
-.sort_button{
-  display: flex;
+.sort_button {
+  text-align: right; /* Вирівнює кнопку зліва */
 }
 .main__search input {
   width: 100%;

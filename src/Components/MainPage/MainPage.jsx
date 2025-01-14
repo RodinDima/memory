@@ -98,9 +98,11 @@ const MainPage = () => {
               placeholder="Введіть ім'я для пошуку..."
             />
           </form>
+          <div className="sort_button">
           <button className="sort" onClick={toggleSort}>
             {isDateSorted ? "Сортувати Героїв за алфавітом" : "Сортувати Героїв за датою смерті"}
           </button>
+          </div>
           <div className="main__victim">
             {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
               <div className="main__victim-item" key={hero.id}>
