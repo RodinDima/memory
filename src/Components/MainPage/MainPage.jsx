@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
-
 import Button from "../Button/Button";
-
-import { Hero } from "../Constants";
-
+import { Hero as initialHeroList } from "../Constants";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
-
 import "./style.css";
-
 import Footer from "../Footer/Footer.jsx";
 import Header from "../Header/Header";
 import ScrollToTop from "../ScrollToTop/ScrollToTop.jsx";
@@ -18,30 +13,51 @@ import AnniversaryMonth from "../AnniversaryMonth/AnniversaryMonth.jsx";
 
 const MainPage = () => {
   const [searchText, setSearchText] = useState("");
-
   const [displayedHeroes, setDisplayedHeroes] = useState(3);
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isDateSorted, setIsDateSorted] = useState(false);
+  const [Hero, setHero] = useState(initialHeroList); // Додаємо стан для героїв
+
+  const parseDate = (dateString) => {
+    const [, deathDateString] = dateString.split(" - ");
+    const [day, month, year] = deathDateString.split(".").map(Number);
+    return new Date(year, month - 1, day);
+  };
+
+  const sortByDate = () => {
+    const sorted = [...Hero].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    setHero(sorted);
+  };
+
+  const resetSort = () => {
+    setHero(initialHeroList); // Повернення до початкового масиву
+  };
+
+  const toggleSort = () => {
+    if (isDateSorted) {
+      resetSort(); // Повернення до алфавіту
+    } else {
+      sortByDate();
+    }
+    setIsDateSorted((prev) => !prev);
+  };
 
   const filteredHeroes = Hero.filter((hero) =>
     hero.name.toLowerCase().includes(searchText.toLowerCase())
   );
 
   const showMoreHeroes = () => {
-    console.log(displayedHeroes + 3);
-
     setDisplayedHeroes(displayedHeroes + 3);
   };
+
   const hasMoreHeroes = displayedHeroes < filteredHeroes.length;
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", handleResize);
     handleResize();
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -73,6 +89,7 @@ const MainPage = () => {
               <Button className="main__btns-war" buttonText="Шляхами війни" />
             </Link>
           </div>
+          
           <form className="main__search">
             <input
               type="text"
@@ -81,6 +98,9 @@ const MainPage = () => {
               placeholder="Введіть ім'я для пошуку..."
             />
           </form>
+          <button className="sort" onClick={toggleSort}>
+            {isDateSorted ? "Сортувати Героїв за алфавітом" : "Сортувати Героїв за датою смерті"}
+          </button>
           <div className="main__victim">
             {filteredHeroes.slice(0, displayedHeroes).map((hero) => (
               <div className="main__victim-item" key={hero.id}>
@@ -91,7 +111,6 @@ const MainPage = () => {
                 >
                   <img src={hero.photo} alt="victim" />
                 </Link>
-
                 <div className="main__victim-details">
                   <p>{hero.name}</p>
                   <p>{hero.date}</p>
@@ -99,9 +118,7 @@ const MainPage = () => {
               </div>
             ))}
           </div>
-          {filteredHeroes.length === 0 && (
-            <p className="nothing">Нікого не знайдено</p>
-          )}
+          {filteredHeroes.length === 0 && <p className="nothing">Нікого не знайдено</p>}
           {windowWidth < 575 && hasMoreHeroes && (
             <Button
               className="main__read-more-button"
